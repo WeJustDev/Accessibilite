@@ -6,13 +6,14 @@ Ce qu'il faut !
 
 Rendre accessible ! :
 
-[] Header avec Menu
-[] Formulaire
-[] Tableau complexe
-[] Footer
-[] Fil d'ariane
-[] Liens
-[] Images
-[] Vdéo (youtube)
+- [ ] Header avec Menu
+- [ ] Formulaire
+- [ ] Tableau complexe
+- [ ] Footer
+- [ ] Fil d'ariane
+- [ ] Liens
+- [ ] Images
+- [ ] Vidéo (youtube)
+- [ ] plusieurs pages
 
-[] Le site doit être responsif
+- [ ] Le site doit être responsif
