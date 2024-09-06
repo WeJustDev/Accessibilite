@@ -13,6 +13,7 @@ Rendre accessible ! :
 - [ ] Fil d'ariane
 - [ ] Liens
 - [ ] Images
-- [ ] Vdéo (youtube)
+- [ ] Vidéo (youtube)
+- [ ] plusieurs pages
 
 - [ ] Le site doit être responsif
