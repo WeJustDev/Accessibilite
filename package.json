@@ -3,10 +3,8 @@
     "private": true,
     "scripts": {
       "clean": "rm -rf ./dist",
-      "prod": "node ./scripts/esbuild.prod.js",
-      "build": "node ./scripts/esbuild.build.js",
-      "watch": "node ./scripts/esbuild.watch.js",
-      "rebuild": "rm -rf ./node_modules && rm -rf package-lock.json && npm install && npm run build "
+      "rebuild": "rm -rf ./node_modules && rm -rf package-lock.json && npm install && npm run build ",
+      "dev": "npx tailwindcss -i ./src/css/style.css -o ./dist/main.css --watch"
     },
     "dependencies": {
       "alpinejs": "^3.13.3",
