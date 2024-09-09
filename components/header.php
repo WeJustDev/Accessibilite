@@ -1,90 +1,80 @@
-<!DOCTYPE html>
-<html lang="fr">
+<style>
+    /* Rudimentary CSS for demonstration */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./dist/main.css" rel="stylesheet">
-    <script src="/src/js/jquery-accessibleMegaMenu.js"></script>
-    <script src="/src/js/main.js"></script>
-    <title>Document</title>
-    <style>
-        /* Rudimentary mega menu CSS for demonstration */
+    /* mega menu list */
+    .nav-menu {
+        display: block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: relative;
+        z-index: 15;
+    }
 
-        /* mega menu list */
-        .nav-menu {
-            display: block;
-            position: relative;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            z-index: 15;
-        }
+    /* a top level navigation item in the mega menu */
+    .nav-item {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-        /* a top level navigation item in the mega menu */
-        .nav-item {
-            list-style: none;
-            display: inline-block;
-            padding: 0;
-            margin: 0;
-        }
+    /* first descendant link within a top level navigation item */
+    .nav-item>a {
+        border: 1px solid transparent;
+        display: inline-block;
+        margin: 0 0 -1px 0;
+        padding: 0.5em 1em;
+        position: relative;
+    }
 
-        /* first descendant link within a top level navigation item */
-        .nav-item > a {
-            position: relative;
-            display: inline-block;
-            padding: 0.5em 1em;
-            margin: 0 0 -1px 0;
-            border: 1px solid transparent;
-        }
+    /* focus/open states of first descendant link within a top level navigation item */
+    .nav-item>a:focus,
+    .nav-item>a.open {
+        border: 1px solid #dedede;
+    }
 
-        /* focus/open states of first descendant link within a top level
-           navigation item */
-        .nav-item > a:focus,
-        .nav-item > a.nav-menu-open {
-            border: 1px solid #dedede;
-        }
+    /* open state of first descendant link within a top level 
+     navigation item */
+    .nav-item>a.open {
+        background-color: #fff;
+        border-bottom: none;
+        z-index: 1;
+    }
 
-        /* open state of first descendant link within a top level
-           navigation item */
-        .nav-item > a.nav-menu-open {
-            background-color: #fff;
-            border-bottom: none;
-            z-index: 1;
-        }
+    /* sub-navigation panel */
+    .sub-nav {
+        background-color: #fff;
+        border: 1px solid #dedede;
+        display: none;
+        margin-top: -1px;
+        padding: 0.5em 1em;
+        position: absolute;
+        top: 2.2em;
+    }
 
-        /* sub-navigation panel */
-        .sub-nav {
-            position: absolute;
-            display: none;
-            top: 2.6em;
-            margin-top: -1px;
-            padding: 0.5em 1em;
-            border: 1px solid #dedede;
-            background-color: #fff;
-        }
+    /* sub-navigation panel open state */
+    .sub-nav.open {
+        display: block;
+    }
 
-        /* sub-navigation panel open state */
-        .sub-nav.nav-menu-open {
-            display: block;
-        }
+    /* list of items within sub-navigation panel */
+    .sub-nav ul {
+        display: inline-block;
+        margin: 0 1em 0 0;
+        padding: 0;
+        vertical-align: top;
+    }
 
-        /* list of items within sub-navigation panel */
-        .sub-nav ul {
-            display: inline-block;
-            vertical-align: top;
-            margin: 0 1em 0 0;
-            padding: 0;
-        }
-
-        /* list item within sub-navigation panel */
-        .sub-nav li {
-            display: block;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    /* list item within sub-navigation panel */
+    .sub-nav li {
+        display: block;
+        line-height: 2;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+</style>
 </head>
 
 <body>
@@ -111,86 +101,47 @@
         </ul>
     </div>
 
-    <nav id="test-nav-menu">
+    <nav id="nav" class="megamenu">
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="?movie">Movies</a>
+                <a href="?music">Music</a>
                 <div class="sub-nav">
                     <ul class="sub-nav-group">
-                        <li><a href="?movie&genre=0">Action &amp; Adventure</a></li>
-                        <li><a href="?movie&genre=2">Children &amp; Family</a></li>
-                        <li>&#8230;</li>
+                        <li><a href="?music&amp;genre=0">Alternative</a></li>
+                        <li><a href="?music&amp;genre=3">R&amp;B/Soul</a></li>
+                        <li><a href="?music&amp;genre=6">Indie</a></li>
                     </ul>
                     <ul class="sub-nav-group">
-                        <li><a href="?movie&genre=7">Dramas</a></li>
-                        <li><a href="?movie&genre=9">Foreign</a></li>
-                        <li>&#8230;</li>
+                        <li><a href="?music&amp;genre=1">Dance</a></li>
+                        <li><a href="?music&amp;genre=4">Electronic</a></li>
+                        <li><a href="?music&amp;genre=7">Metal</a></li>
                     </ul>
                     <ul class="sub-nav-group">
-                        <li><a href="?movie&genre=14">Musicals</a></li>
-                        <li><a href="?movie&genre=15">Romance</a></li>
-                        <li>&#8230;</li>
+                        <li><a href="?music&amp;genre=2">Hip-Hop/Rap</a></li>
+                        <li><a href="?music&amp;genre=5">Jazz</a></li>
+                        <li><a href="?music&amp;genre=8">Latino</a></li>
                     </ul>
                 </div>
             </li>
             <li class="nav-item">
-                <a href="?tv">TV Shows</a>
+                <a href="?movies">Movies</a>
                 <div class="sub-nav">
                     <ul class="sub-nav-group">
-                        <li><a href="?tv&genre=20">Classic TV</a></li>
-                        <li><a href="?tv&genre=21">Crime TV</a></li>
-                        <li>&#8230;</li>
+                        <li><a href="?movies&amp;genre=10">New Release</a></li>
+                        <li><a href="?movies&amp;genre=13">Comedy</a></li>
+                        <li><a href="?movies&amp;genre=16">Action</a></li>
                     </ul>
                     <ul class="sub-nav-group">
-                        <li><a href="?tv&genre=27">Reality TV</a></li>
-                        <li><a href="?tv&genre=30">TV Action</a></li>
-                        <li>&#8230;</li>
+                        <li><a href="?movies&amp;genre=11">Drama</a></li>
+                        <li><a href="?movies&amp;genre=14">Sci-Fi</a></li>
+                        <li><a href="?movies&amp;genre=17">Adventure</a></li>
                     </ul>
                     <ul class="sub-nav-group">
-                        <li><a href="?tv&genre=33">TV Dramas</a></li>
-                        <li><a href="?tv&genre=34">TV Horror</a></li>
-                        <li>&#8230;</li>
+                        <li><a href="?movies&amp;genre=12">Horror</a></li>
+                        <li><a href="?movies&amp;genre=15">Documentary</a></li>
+                        <li><a href="?movies&amp;genre=18">Fantasy</a></li>
                     </ul>
                 </div>
             </li>
         </ul>
     </nav>
-
-    <main role="main" id="contenu" tabindex="-1">
-        ...
-    </main>
-
-    <!-- include jquery -->
-    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
-
-    <script>
-        $("nav#test-nav-menu").accessibleMegaMenu({
-            /* prefix for generated unique id attributes, which are required
-               to indicate aria-owns, aria-controls and aria-labelledby */
-            uuidPrefix: "accessible-megamenu",
-
-            /* css class used to define the megamenu styling */
-            menuClass: "nav-menu",
-
-            /* css class for a top-level navigation item in the megamenu */
-            topNavItemClass: "nav-item",
-
-            /* css class for a megamenu panel */
-            panelClass: "sub-nav",
-
-            /* css class for a group of items within a megamenu panel */
-            panelGroupClass: "sub-nav-group",
-
-            /* css class for the hover state */
-            hoverClass: "nav-menu-hover",
-
-            /* css class for the focus state */
-            focusClass: "nav-menu-focus",
-
-            /* css class for the open state */
-            openClass: "nav-menu-open"
-        });
-    </script>
-</body>
-
-</html>
