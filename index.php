@@ -9,23 +9,28 @@ $page = isset($_GET['page']) ? $_GET['page'] : null;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./dist/main.css">
-    <title>Accueil | Voyage en France</title>
 </head>
 
 <body>
-    <?php include "./components/header2.php"; ?>
+    <?php include "./components/header.php"; ?>
 
     <main role="main" id="contenu" tabindex="-1">
         <?php
-        $filePath = './components/' . $page . '.php';
-
-        if (file_exists($filePath)) {
-            include $filePath;
+        if ($page) {
+            $filePath = './components/' . $page . '.php';
+    
+            if (file_exists($filePath)) {
+                include $filePath;
+            } else {
+                include './components/accueil.php';
+            }
         } else {
-            echo "<div class='w-full text-center mt-10'>Page non trouvée.</div>";
+            include './components/accueil.php';
         }
         ?>
     </main>
+
+    <?php include "./components/footer.php" ?>
 
     <!-- include jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -36,6 +41,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : null;
     <!-- include the accessible-mega-menu plugin script -->
     <script src="./src/js/accessible-mega-menu.js"></script>
     <script src="./src/js/main.js"></script>
+    <script src="./src/js/dyslexic.js"></script>
 
     <!-- initialize a selector as an accessible-mega-menu -->
     <script>

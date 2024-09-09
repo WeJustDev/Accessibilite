@@ -2,11 +2,7 @@
 <html lang="fr">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/main.css">
-    <title>Page d'inscription</title>
-    <script src="./src/js/form.js"></script>
+    <title>Espace utilisateur - Inscription | Voyage en France</title>
 </head>
 
 <body class="bg-gray-100">

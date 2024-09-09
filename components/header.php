@@ -78,6 +78,11 @@
 </head>
 
 <body>
+    <div>
+        <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique">
+        <label for="dyslexic-mode-toggle">Mode dyslexique</label>
+    </div>
+
     <div role="navigation"
         class="relative bg-gray-600 w-full flex items-center focus-within:h-48 focus-within:md:h-16 h-0 px-3 overflow-hidden"
         aria-label="Accès rapide">
@@ -101,47 +106,53 @@
         </ul>
     </div>
 
-    <nav id="nav" class="megamenu">
+    <nav id="nav" class="megamenu" aria-label="Navigation principale">
         <ul class="nav-menu">
             <li class="nav-item">
-                <a href="?music">Music</a>
+                <a href="/" aria-label="Page d'accueil">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <button href="?page=logements" aria-expanded="false" aria-label="Types de logements" aria-haspopup>Logements</button>
                 <div class="sub-nav">
-                    <ul class="sub-nav-group">
-                        <li><a href="?music&amp;genre=0">Alternative</a></li>
-                        <li><a href="?music&amp;genre=3">R&amp;B/Soul</a></li>
-                        <li><a href="?music&amp;genre=6">Indie</a></li>
+                    <h2 id="sub-nav-title">Hébergements conviviaux</h2>
+                    <ul class="sub-nav-group" aria-labelledby="sub-nav-title">
+                        <li><a href="?page=logements&type=auberges">Auberges</a></li>
+                        <li><a href="?page=logements&type=campings">Campings</a></li>
+                        <li><a href="?page=logements&type=hotes">Maison d'hôtes</a></li>
                     </ul>
-                    <ul class="sub-nav-group">
-                        <li><a href="?music&amp;genre=1">Dance</a></li>
-                        <li><a href="?music&amp;genre=4">Electronic</a></li>
-                        <li><a href="?music&amp;genre=7">Metal</a></li>
-                    </ul>
-                    <ul class="sub-nav-group">
-                        <li><a href="?music&amp;genre=2">Hip-Hop/Rap</a></li>
-                        <li><a href="?music&amp;genre=5">Jazz</a></li>
-                        <li><a href="?music&amp;genre=8">Latino</a></li>
+                    <h2 id="sub-nav-title2">Hébergement haut de gamme</h2>
+                    <ul class="sub-nav-group" aria-labelledby="sub-nav-title2">
+                        <li><a href="?page=logements&type=hotels">Hôtels</a></li>
+                        <li><a href="?page=logements&type=villas">Villas</a></li>
                     </ul>
                 </div>
             </li>
             <li class="nav-item">
-                <a href="?movies">Movies</a>
+                <button href="?page=activitees" aria-expanded="false" aria-label="activités" aria-haspopup>Activitées</button>
                 <div class="sub-nav">
-                    <ul class="sub-nav-group">
-                        <li><a href="?movies&amp;genre=10">New Release</a></li>
-                        <li><a href="?movies&amp;genre=13">Comedy</a></li>
-                        <li><a href="?movies&amp;genre=16">Action</a></li>
+                    <h2 id="sub-nav-title3">Activitées aquatiques</h2>
+                    <ul class="sub-nav-group" aria-labelledby="sub-nav-title3">
+                        <li><a href="?page=activitees&type=surf">Surf</a></li>
+                        <li><a href="?page=activitees&type=wakeboard">Wakeboard</a></li>
+                        <li><a href="?page=activitees&type=plongeon">Plongeon</a></li>
+                        <li><a href="?page=activitees&type=plongee">Plongée</a></li>
+                        <li><a href="?page=activitees&type=kayak">Kayak</a></li>
+                        <li><a href="?page=activitees&type=paddle">Paddle</a></li>
+                        <li><a href="?page=activitees&type=voile">Voile</a></li>
+                        <li><a href="?page=activitees&type=aquagym">Aqua-gym</a></li>
                     </ul>
-                    <ul class="sub-nav-group">
-                        <li><a href="?movies&amp;genre=11">Drama</a></li>
-                        <li><a href="?movies&amp;genre=14">Sci-Fi</a></li>
-                        <li><a href="?movies&amp;genre=17">Adventure</a></li>
-                    </ul>
-                    <ul class="sub-nav-group">
-                        <li><a href="?movies&amp;genre=12">Horror</a></li>
-                        <li><a href="?movies&amp;genre=15">Documentary</a></li>
-                        <li><a href="?movies&amp;genre=18">Fantasy</a></li>
+                    <h2 id="sub-nav-title4">Activitées culturelles</h2>
+                    <ul class="sub-nav-group" aria-labelledby="sub-nav-title4">
+                        <li><a href="?page=activitees&type=musees">Musées</a></li>
+                        <li><a href="?page=activitees&type=festivals">Festivals</a></li>
+                        <li><a href="?page=activitees&type=expositions">Expositions</a></li>
+                        <li><a href="?page=activitees&type=spectacles">Spectacles</a></li>
+                        <li><a href="?page=activitees&type=litteraires">Rencontres littéraires</a></li>
                     </ul>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a href="?page=utilisateur">Espace utilisateur</a>
             </li>
         </ul>
     </nav>
