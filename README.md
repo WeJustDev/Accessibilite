@@ -16,5 +16,6 @@ Rendre accessible ! :
 - [ ] Vidéo (youtube)
 - [ ] plusieurs pages
 - [ ] un title pour chaques pages
+- [ ] une page plan du site
 
 - [ ] Le site doit être responsif
