@@ -20,7 +20,7 @@
     }
 
     /* first descendant link within a top level navigation item */
-    .nav-item>a {
+    .nav-item>a, .nav-item>button {
         border: 1px solid transparent;
         display: inline-block;
         margin: 0 0 -1px 0;
@@ -47,7 +47,8 @@
         background-color: #fff;
         border: 1px solid #dedede;
         display: none;
-        margin-top: -1px;
+        gap: 1rem;
+        margin-top: 37px;
         padding: 0.5em 1em;
         position: absolute;
         top: 2.2em;
@@ -55,7 +56,7 @@
 
     /* sub-navigation panel open state */
     .sub-nav.open {
-        display: block;
+        display: flex;
     }
 
     /* list of items within sub-navigation panel */
@@ -64,6 +65,12 @@
         margin: 0 1em 0 0;
         padding: 0;
         vertical-align: top;
+    }
+
+    .sub-nav h2 {
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #3B82F6;
     }
 
     /* list item within sub-navigation panel */
@@ -109,48 +116,56 @@
     </div>
 
     <nav id="nav" class="megamenu" aria-label="Navigation principale">
-        <ul class="nav-menu">
+        <ul class="nav-menu flex flex-row gap-3 items-center justify-center p-4">
             <li class="nav-item">
                 <a href="/" aria-label="Page d'accueil">Accueil</a>
             </li>
             <li class="nav-item">
                 <button href="?page=logements" aria-expanded="false" aria-label="Types de logements" aria-haspopup>Logements</button>
                 <div class="sub-nav">
-                    <h2 id="sub-nav-title">Hébergements conviviaux</h2>
-                    <ul class="sub-nav-group" aria-labelledby="sub-nav-title">
-                        <li><a href="?page=logements&type=auberges">Auberges</a></li>
-                        <li><a href="?page=logements&type=campings">Campings</a></li>
-                        <li><a href="?page=logements&type=hotes">Maison d'hôtes</a></li>
-                    </ul>
-                    <h2 id="sub-nav-title2">Hébergement haut de gamme</h2>
-                    <ul class="sub-nav-group" aria-labelledby="sub-nav-title2">
-                        <li><a href="?page=logements&type=hotels">Hôtels</a></li>
-                        <li><a href="?page=logements&type=villas">Villas</a></li>
-                    </ul>
+                    <div>
+                        <h2 id="sub-nav-title">Hébergements conviviaux</h2>
+                        <ul class="sub-nav-group" aria-labelledby="sub-nav-title">
+                            <li><a href="?page=logements&type=auberges">Auberges</a></li>
+                            <li><a href="?page=logements&type=campings">Campings</a></li>
+                            <li><a href="?page=logements&type=hotes">Maison d'hôtes</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 id="sub-nav-title2">Hébergement haut de gamme</h2>
+                        <ul class="sub-nav-group" aria-labelledby="sub-nav-title2">
+                            <li><a href="?page=logements&type=hotels">Hôtels</a></li>
+                            <li><a href="?page=logements&type=villas">Villas</a></li>
+                        </ul>
+                    </div>
                 </div>
             </li>
             <li class="nav-item">
                 <button href="?page=activitees" aria-expanded="false" aria-label="activités" aria-haspopup>Activitées</button>
                 <div class="sub-nav">
-                    <h2 id="sub-nav-title3">Activitées aquatiques</h2>
-                    <ul class="sub-nav-group" aria-labelledby="sub-nav-title3">
-                        <li><a href="?page=activitees&type=surf">Surf</a></li>
-                        <li><a href="?page=activitees&type=wakeboard">Wakeboard</a></li>
-                        <li><a href="?page=activitees&type=plongeon">Plongeon</a></li>
-                        <li><a href="?page=activitees&type=plongee">Plongée</a></li>
-                        <li><a href="?page=activitees&type=kayak">Kayak</a></li>
-                        <li><a href="?page=activitees&type=paddle">Paddle</a></li>
-                        <li><a href="?page=activitees&type=voile">Voile</a></li>
-                        <li><a href="?page=activitees&type=aquagym">Aqua-gym</a></li>
-                    </ul>
-                    <h2 id="sub-nav-title4">Activitées culturelles</h2>
-                    <ul class="sub-nav-group" aria-labelledby="sub-nav-title4">
-                        <li><a href="?page=activitees&type=musees">Musées</a></li>
-                        <li><a href="?page=activitees&type=festivals">Festivals</a></li>
-                        <li><a href="?page=activitees&type=expositions">Expositions</a></li>
-                        <li><a href="?page=activitees&type=spectacles">Spectacles</a></li>
-                        <li><a href="?page=activitees&type=litteraires">Rencontres littéraires</a></li>
-                    </ul>
+                    <div>
+                        <h2 id="sub-nav-title3">Activitées aquatiques</h2>
+                        <ul class="sub-nav-group" aria-labelledby="sub-nav-title3">
+                            <li><a href="?page=activitees&type=surf">Surf</a></li>
+                            <li><a href="?page=activitees&type=wakeboard">Wakeboard</a></li>
+                            <li><a href="?page=activitees&type=plongeon">Plongeon</a></li>
+                            <li><a href="?page=activitees&type=plongee">Plongée</a></li>
+                            <li><a href="?page=activitees&type=kayak">Kayak</a></li>
+                            <li><a href="?page=activitees&type=paddle">Paddle</a></li>
+                            <li><a href="?page=activitees&type=voile">Voile</a></li>
+                            <li><a href="?page=activitees&type=aquagym">Aqua-gym</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 id="sub-nav-title4">Activitées culturelles</h2>
+                        <ul class="sub-nav-group" aria-labelledby="sub-nav-title4">
+                            <li><a href="?page=activitees&type=musees">Musées</a></li>
+                            <li><a href="?page=activitees&type=festivals">Festivals</a></li>
+                            <li><a href="?page=activitees&type=expositions">Expositions</a></li>
+                            <li><a href="?page=activitees&type=spectacles">Spectacles</a></li>
+                            <li><a href="?page=activitees&type=litteraires">Rencontres littéraires</a></li>
+                        </ul>
+                    </div>
                 </div>
             </li>
             <li class="nav-item">
