@@ -78,9 +78,11 @@
 </head>
 
 <body>
-    <div>
-        <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique">
-        <label for="dyslexic-mode-toggle">Mode dyslexique</label>
+    <div class="flex flex-col gap-3 absolute bg-yellow-400 p-6 right-0 top-1/3">
+        <div>
+            <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique">
+            <label for="dyslexic-mode-toggle">Mode dyslexique</label>
+        </div>
     </div>
 
     <div role="navigation"
