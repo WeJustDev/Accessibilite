@@ -85,13 +85,6 @@
 </head>
 
 <body>
-    <div class="flex flex-col gap-3 absolute bg-yellow-400 p-6 right-0 top-1/3">
-        <div>
-            <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique">
-            <label for="dyslexic-mode-toggle">Mode dyslexique</label>
-        </div>
-    </div>
-
     <div role="navigation"
         class="relative bg-gray-600 w-full flex items-center focus-within:h-48 focus-within:md:h-16 h-0 px-3 overflow-hidden"
         aria-label="Accès rapide">
@@ -113,6 +106,13 @@
                     page</a>
             </li>
         </ul>
+    </div>
+
+    <div class="flex flex-col gap-3 absolute bg-yellow-400 p-6 right-0 top-1/3">
+        <div>
+            <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique" class="cursor-pointer">
+            <label for="dyslexic-mode-toggle" class="cursor-pointer">Mode dyslexique</label>
+        </div>
     </div>
 
     <nav id="nav" class="megamenu" aria-label="Navigation principale">
