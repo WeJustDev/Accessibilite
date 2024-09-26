@@ -90,27 +90,27 @@
         aria-label="Accès rapide">
         <ul class="flex gap-5 flex-col md:flex-row md:items-center justify-center h-full w-full overflow-hidden px-2">
             <li>
-                <a href="#search" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false">Barre de
+                <a href="#search" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Barre de
                     recherche</a>
             </li>
             <li>
-                <a href="#nav" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false">Menu de
+                <a href="#nav" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Menu de
                     navigation</a>
             </li>
             <li>
-                <a href="#contenu" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false">Aller au
+                <a href="#contenu" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Aller au
                     contenu</a>
             </li>
             <li>
-                <a href="#footer" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false">Pied de
+                <a href="#footer" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Pied de
                     page</a>
             </li>
         </ul>
     </div>
 
-    <div class="flex flex-col gap-3 absolute bg-yellow-400 p-6 right-0 top-1/3">
+    <div class="flex flex-col gap-3 absolute bg-yellow-400 p-6 right-0 top-1/3" >
         <div>
-            <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique" class="cursor-pointer">
+            <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique" tabindex="3" class="cursor-pointer">
             <label for="dyslexic-mode-toggle" class="cursor-pointer">Mode dyslexique</label>
         </div>
     </div>
@@ -118,58 +118,56 @@
     <nav id="nav" class="megamenu" aria-label="Navigation principale">
         <ul class="nav-menu flex flex-row gap-3 items-center justify-center p-4">
             <li class="nav-item">
-                <a href="/" aria-label="Page d'accueil">Accueil</a>
+                <a href="/" aria-label="Page d'accueil" tabindex="2">Accueil</a>
             </li>
             <li class="nav-item">
-                <button href="?page=logements" aria-expanded="false" aria-label="Types de logements" aria-haspopup>Logements</button>
+                <button href="?page=logements" aria-expanded="false" aria-label="Types de logements" tabindex="2" aria-haspopup>Logements</button>
                 <div class="sub-nav">
                     <div>
                         <h2 id="sub-nav-title">Hébergements conviviaux</h2>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title">
-                            <li><a href="?page=logements&type=auberges">Auberges</a></li>
-                            <li><a href="?page=logements&type=campings">Campings</a></li>
-                            <li><a href="?page=logements&type=hotes">Maison d'hôtes</a></li>
+                            <li><a href="?page=logements&type=auberges" tabindex="2.5">Auberges</a></li>
+                            <li><a href="?page=logements&type=campings" tabindex="2.5">Campings</a></li>
+                            <li><a href="?page=logements&type=hotes" tabindex="2.5">Maison d'hôtes</a></li>
                         </ul>
                     </div>
                     <div>
                         <h2 id="sub-nav-title2">Hébergement haut de gamme</h2>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title2">
-                            <li><a href="?page=logements&type=hotels">Hôtels</a></li>
-                            <li><a href="?page=logements&type=villas">Villas</a></li>
+                            <li><a href="?page=logements&type=hotels" tabindex="2.5">Hôtels</a></li>
+                            <li><a href="?page=logements&type=villas" tabindex="2.5">Villas</a></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="nav-item">
-                <button href="?page=activitees" aria-expanded="false" aria-label="activités" aria-haspopup>Activitées</button>
+                <button href="?page=activitees" aria-expanded="false" aria-label="activités" tabindex="2" aria-haspopup>Activitées</button>
                 <div class="sub-nav">
                     <div>
                         <h2 id="sub-nav-title3">Activitées aquatiques</h2>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title3">
-                            <li><a href="?page=activitees&type=surf">Surf</a></li>
-                            <li><a href="?page=activitees&type=wakeboard">Wakeboard</a></li>
-                            <li><a href="?page=activitees&type=plongeon">Plongeon</a></li>
-                            <li><a href="?page=activitees&type=plongee">Plongée</a></li>
-                            <li><a href="?page=activitees&type=kayak">Kayak</a></li>
-                            <li><a href="?page=activitees&type=paddle">Paddle</a></li>
-                            <li><a href="?page=activitees&type=voile">Voile</a></li>
-                            <li><a href="?page=activitees&type=aquagym">Aqua-gym</a></li>
+                            <li><a href="?page=activitees&type=surf" tabindex="2.5">Surf</a></li>
+                            <li><a href="?page=activitees&type=wakeboard" tabindex="2.5">Wakeboard</a></li>
+                            <li><a href="?page=activitees&type=plongeon" tabindex="2.5">Plongeon</a></li>
+                            <li><a href="?page=activitees&type=plongee" tabindex="2.5">Plongée</a></li>
+                            <li><a href="?page=activitees&type=kayak" tabindex="2.5">Kayak</a></li>
+                            <li><a href="?page=activitees&type=paddle" tabindex="2.5">Paddle</a></li>
                         </ul>
                     </div>
                     <div>
                         <h2 id="sub-nav-title4">Activitées culturelles</h2>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title4">
-                            <li><a href="?page=activitees&type=musees">Musées</a></li>
-                            <li><a href="?page=activitees&type=festivals">Festivals</a></li>
-                            <li><a href="?page=activitees&type=expositions">Expositions</a></li>
-                            <li><a href="?page=activitees&type=spectacles">Spectacles</a></li>
-                            <li><a href="?page=activitees&type=litteraires">Rencontres littéraires</a></li>
+                            <li><a href="?page=activitees&type=musees" tabindex="2.5">Musées</a></li>
+                            <li><a href="?page=activitees&type=festivals" tabindex="2.5">Festivals</a></li>
+                            <li><a href="?page=activitees&type=expositions" tabindex="2.5">Expositions</a></li>
+                            <li><a href="?page=activitees&type=spectacles" tabindex="2.5">Spectacles</a></li>
+                            <li><a href="?page=activitees&type=litteraires" tabindex="2.5">Rencontres littéraires</a></li>
                         </ul>
                     </div>
                 </div>
             </li>
             <li class="nav-item">
-                <a href="?page=utilisateur">Espace utilisateur</a>
+                <a href="?page=utilisateur" tabindex="2">Espace utilisateur</a>
             </li>
         </ul>
     </nav>
