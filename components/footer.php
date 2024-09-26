@@ -3,8 +3,8 @@
         <div class="container m-auto">
             <div class="grid lg:grid-cols-12 w-full items-start">
                 <div class="lg:col-span-3 flex flex-col gap-2 justify-center items-start [&>*]:m-auto">
-                    <h3 class="fr-footer__top-cat" id="footer-list-1">Logement</h3>
-                    <ul class="fr-footer__top-list" aria-labelledby="footer-list-1">
+                    <h3 class="fr-footer__top-cat text-xl font-semibold" id="footer-list-1">Logement</h3>
+                    <ul class="fr-footer__top-list text-center" aria-labelledby="footer-list-1">
                         <li> <a class="fr-footer__top-link" href="#">Auberges</a> </li>
                         <li> <a class="fr-footer__top-link" href="#">Campings</a> </li>
                         <li> <a class="fr-footer__top-link" href="#">Maison d'hôtes</a> </li>
@@ -13,8 +13,8 @@
                     </ul>
                 </div>
                 <div class="lg:col-span-3 flex flex-col gap-2 justify-center items-start [&>*]:m-auto">
-                    <h3 class="fr-footer__top-cat" id="footer-list-2">Activitées aquatiques</h3>
-                    <ul class="fr-footer__top-list" aria-labelledby="footer-list-2">
+                    <h3 class="fr-footer__top-cat text-xl font-semibold" id="footer-list-2">Activitées aquatiques</h3>
+                    <ul class="fr-footer__top-list text-center" aria-labelledby="footer-list-2">
                         <li> <a class="fr-footer__top-link" href="#">Surf</a> </li>
                         <li> <a class="fr-footer__top-link" href="#">Wakeboard</a> </li>
                         <li> <a class="fr-footer__top-link" href="#">Plongeon</a> </li>
@@ -24,8 +24,8 @@
                     </ul>
                 </div>
                 <div class="lg:col-span-3 flex flex-col gap-2 justify-center items-start [&>*]:m-auto">
-                    <h3 class="fr-footer__top-cat" id="footer-list-3">Activitées culturelles</h3>
-                    <ul class="fr-footer__top-list" aria-labelledby="footer-list-3">
+                    <h3 class="fr-footer__top-cat text-xl font-semibold" id="footer-list-3">Activitées culturelles</h3>
+                    <ul class="fr-footer__top-list text-center" aria-labelledby="footer-list-3">
                         <li> <a class="fr-footer__top-link" href="#">Musées</a> </li>
                         <li> <a class="fr-footer__top-link" href="#">Festivals</a> </li>
                         <li> <a class="fr-footer__top-link" href="#">Expositions</a> </li>
@@ -34,7 +34,7 @@
                     </ul>
                 </div>
                 <div class="lg:col-span-3 flex flex-col gap-2 justify-center items-start [&>*]:m-auto">
-                    <ul class="fr-footer__top-list">
+                    <ul class="fr-footer__top-list text-center">
                         <li> <a class="fr-footer__top-link" href="#">Accueil</a> </li>
                         <li> <a class="fr-footer__top-link" href="#">Espace utilisateurs</a> </li>
                     </ul>

@@ -108,7 +108,7 @@
         </ul>
     </div>
 
-    <div class="flex flex-col gap-3 absolute bg-yellow-400 p-6 right-0 top-1/3" >
+    <div class="flex flex-col gap-3 fixed top-52 bg-yellow-400 p-6 right-0" >
         <div>
             <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique" tabindex="3" class="cursor-pointer">
             <label for="dyslexic-mode-toggle" class="cursor-pointer">Mode dyslexique</label>
