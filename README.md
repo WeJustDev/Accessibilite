@@ -18,3 +18,5 @@ Rendre accessible ! :
 - [ ] un title pour chaques pages
 
 - [ ] Le site doit être responsif
+
+-   [lien vers le cour](https://intra.iha.unistra.fr/doku.php?id=intranet_qlio:wahl-cours-qlio)
