@@ -3,10 +3,8 @@
 
     /* mega menu list */
     .nav-menu {
-        display: block;
+        display: flex;
         list-style: none;
-        margin: 0;
-        padding: 0;
         position: relative;
         z-index: 15;
     }
@@ -116,7 +114,7 @@
     </div>
 
     <nav id="nav" class="megamenu" aria-label="Navigation principale">
-        <ul class="nav-menu flex flex-row gap-3 items-center justify-center p-4">
+        <ul class="nav-menu container mx-auto flex flex-row gap-3 items-center justify-center p-4">
             <li class="nav-item">
                 <a href="/" aria-label="Page d'accueil" tabindex="2">Accueil</a>
             </li>
