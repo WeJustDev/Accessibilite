@@ -1,38 +1,42 @@
 <footer class="footer w-full flex flex-col" role="contentinfo" id="footer">
     <div class="footer__top p-6 border-b border-solid border-blue-500">
         <div class="container m-auto">
-            <div class="grid lg:grid-cols-12 w-full">
-                <div class="lg:col-span-4 flex flex-col gap-2 justify-center items-start [&>*]:m-auto">
-                    <h3 class="fr-footer__top-cat">Nom de la catégorie</h3>
-                    <ul class="fr-footer__top-list">
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
+            <div class="grid lg:grid-cols-12 w-full items-start">
+                <div class="lg:col-span-3 flex flex-col gap-2 justify-center items-start [&>*]:m-auto">
+                    <h3 class="fr-footer__top-cat" id="footer-list-1">Logement</h3>
+                    <ul class="fr-footer__top-list" aria-labelledby="footer-list-1">
+                        <li> <a class="fr-footer__top-link" href="#">Auberges</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Campings</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Maison d'hôtes</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Hôtels</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Villas</a> </li>
                     </ul>
                 </div>
-                <div class="lg:col-span-4 flex flex-col gap-2 justify-center items-start [&>*]:m-auto">
-                    <h3 class="fr-footer__top-cat">Nom de la catégorie</h3>
-                    <ul class="fr-footer__top-list">
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
+                <div class="lg:col-span-3 flex flex-col gap-2 justify-center items-start [&>*]:m-auto">
+                    <h3 class="fr-footer__top-cat" id="footer-list-2">Activitées aquatiques</h3>
+                    <ul class="fr-footer__top-list" aria-labelledby="footer-list-2">
+                        <li> <a class="fr-footer__top-link" href="#">Surf</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Wakeboard</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Plongeon</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Plongée</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Kayak</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Paddle</a> </li>
                     </ul>
                 </div>
-                <div class="lg:col-span-4 flex flex-col gap-2 justify-center items-start [&>*]:m-auto">
-                    <h3 class="fr-footer__top-cat">Nom de la catégorie</h3>
+                <div class="lg:col-span-3 flex flex-col gap-2 justify-center items-start [&>*]:m-auto">
+                    <h3 class="fr-footer__top-cat" id="footer-list-3">Activitées culturelles</h3>
+                    <ul class="fr-footer__top-list" aria-labelledby="footer-list-3">
+                        <li> <a class="fr-footer__top-link" href="#">Musées</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Festivals</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Expositions</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Spectacles</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Rencontres littéraires</a> </li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-3 flex flex-col gap-2 justify-center items-start [&>*]:m-auto">
                     <ul class="fr-footer__top-list">
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
-                        <li> <a class="fr-footer__top-link" href="#">Lien de navigation</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Accueil</a> </li>
+                        <li> <a class="fr-footer__top-link" href="#">Espace utilisateurs</a> </li>
                     </ul>
                 </div>
             </div>
