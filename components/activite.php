@@ -4,250 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-    <script src="https://cdn.tailwindcss.com"></script> <!-- Tailwind CSS CDN -->
+    <title>Détail de l'Activité - Découvrez Paris</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100">
-    <div class="mx-auto max-w-6xl">
-        <!-- Titre de la page -->
-        <h1 class="text-3xl font-extrabold my-4 mb-12">Activités à faire en France</h1>
-
-        <!-- Description du contenu -->
-        <h2 class="text-sm font-bold text-gray-500 mb-4" aria-label="Nombre d'activités disponibles">Activités que l'on
-            propose <span class="text-sm font-bold text-gray-700" aria-label="8 activités disponibles">(8)</span> :</h2>
-
-        <!-- Section Filtre et Tri -->
-        <div class="flex flex-col md:flex-row md:justify-between items-center mb-5 space-y-4 md:space-y-0">
-
-            <!-- Filtrage -->
-            <div class="flex flex-wrap justify-center md:justify-start space-x-3" role="group"
-                aria-label="Options de filtrage">
-                <!-- Filtre par Prix -->
-                <div>
-                    <button id="filter-price" aria-label="Filtrer par prix"
-                        class="border px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Prix</button>
-                </div>
-                <!-- Filtre par Langues -->
-                <div>
-                    <button id="filter-language" aria-label="Filtrer par langues"
-                        class="border px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Langues</button>
-                </div>
-                <!-- Filtre par Durée -->
-                <div>
-                    <button id="filter-duration" aria-label="Filtrer par durée"
-                        class="border px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Durée</button>
-                </div>
-                <!-- Filtre par Horaire -->
-                <div>
-                    <button id="filter-schedule" aria-label="Filtrer par horaire"
-                        class="border px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Horaire</button>
-                </div>
-            </div>
-
-            <!-- Bouton pour plus de filtres -->
-            <div class="flex justify-center md:justify-end">
-                <button id="more-filters" aria-label="Afficher plus de filtres"
-                    class="flex items-center border px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
-                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M3 4a1 1 0 012 0v12m0 0a1 1 0 001 1h8a1 1 0 001-1V4a1 1 0 012 0v12a1 1 0 001 1h2a1 1 0 001-1V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1z">
-                        </path>
-                    </svg>
-                    Filtres
-                </button>
-            </div>
-
-            <!-- Trier par -->
-            <div class="flex items-center space-x-2 justify-center md:justify-end">
-                <label for="sort" class="text-gray-700" aria-label="Option de tri">Trier par :</label>
-                <select id="sort"
-                    class="border px-4 py-2 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
-                    aria-label="Choisir une option de tri">
-                    <option value="conseillé">Conseillé</option>
-                    <option value="prix">Prix</option>
-                    <option value="durée">Durée</option>
-                </select>
-            </div>
+<body class="bg-gray-100 text-gray-800">
+    <!-- Header -->
+    <header class="bg-blue-700 text-white">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold" tabindex="0" aria-label="Titre de la page : Détail de l'activité">Détail de l'activité</h1>
+            <nav>
+                <a href="#" class="text-white hover:underline" aria-label="Retour à la page d'accueil">Accueil</a>
+            </nav>
         </div>
+    </header>
 
-    </div>
-
-    <div class="container mx-auto  max-w-6xl my-8 px-4">
-        <!-- Grille pour les cartes -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            <!-- Carte 1 -->
-            <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
-                <a href="#">
-                    <img class="rounded-t-lg" src="./src/img/paris.webp" alt="Visiter Paris" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Découvrez Paris</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700">Explorez les merveilles de Paris, la ville des lumières
-                        avec ses monuments iconiques et son ambiance unique.</p>
-                    <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                        En savoir plus
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Carte 2 -->
-            <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
-                <a href="#">
-                    <img class="rounded-t-lg" src="./src/img/chambord.webp" alt="Château de Chambord" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Visitez le Château de Chambord
-                        </h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700">Un chef-d'œuvre de la Renaissance française, explorez ce
-                        château historique et ses magnifiques jardins.</p>
-                    <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                        En savoir plus
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Carte 3 -->
-            <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
-                <a href="#">
-                    <img class="rounded-t-lg" src="./src/img/grasse.webp" alt="Visitez Grasse" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Capitale mondiale du parfum -
-                            Grasse</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700">Parcourez les ruelles de Grasse, découvrez son patrimoine
-                        et sa longue tradition dans l’art du parfum.</p>
-                    <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                        En savoir plus
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Carte 4 -->
-            <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
-                <a href="#">
-                    <img class="rounded-t-lg" src="./src/img/camargue.webp" alt="Explorez la Camargue" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Nature et tradition en Camargue
-                        </h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700">Profitez de la richesse naturelle et culturelle de la
-                        Camargue, entre marais, flamants roses et chevaux sauvages.</p>
-                    <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                        En savoir plus
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Carte 1 -->
-            <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
-                <a href="#">
-                    <img class="rounded-t-lg" src="./src/img/viaferata.jpg" alt="Via Ferrata en France" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Aventure en Via Ferrata</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700">Partez à l'aventure sur une Via Ferrata en France, où
-                        escalade et randonnée se rencontrent pour des sensations fortes et des paysages à couper le
-                        souffle.</p>
-                    <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                        En savoir plus
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Carte 2 -->
-            <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
-                <a href="#">
-                    <img class="rounded-t-lg" src="./src/img/vtt.jpg" alt="Randonnée VTT en France" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Randonnée VTT en Pleine Nature
-                        </h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700">Explorez les sentiers de montagne et de forêt en VTT, pour
-                        une aventure sportive et naturelle à travers les plus beaux paysages de France.</p>
-                    <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                        En savoir plus
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Carte 3 -->
-            <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
-                <a href="#">
-                    <img class="rounded-t-lg" src="./src/img/snowboard.jpg" alt="Snowboard en France" />
-                </a>
-                <div class="p-5">
-                    <a href="#">
-                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Snowboard dans les Alpes
-                            Françaises</h5>
-                    </a>
-                    <p class="mb-3 font-normal text-gray-700">Dévalez les pistes enneigées des Alpes en snowboard et
-                        profitez d'un cadre exceptionnel pour des descentes inoubliables et des sensations fortes.</p>
-                    <a href="#"
-                        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-md hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                        En savoir plus
-                        <svg class="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true"
-                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M1 5h12m0 0L9 1m4 4L9 9" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-
-
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8 max-w-4xl" role="main">
+        <!-- Image principale -->
+        <div class="rounded-lg overflow-hidden shadow-lg mb-6">
+            <img src="./src/img/paris.webp" alt="Vue de Paris avec la Tour Eiffel" class="w-full h-64 object-cover" aria-describedby="image-description">
         </div>
-    </div>
-    </div>
+        <figcaption id="image-description" class="sr-only">Image montrant la Tour Eiffel et une vue de Paris.</figcaption>
+
+        <!-- Titre et Description -->
+        <section aria-labelledby="activity-title">
+            <h2 id="activity-title" class="text-3xl font-bold mb-4" tabindex="0" aria-label="Titre de l'activité : Découvrez Paris">Découvrez Paris</h2>
+            <p class="text-lg mb-6" tabindex="0">Explorez les merveilles de Paris, la ville des lumières, avec ses monuments iconiques et son ambiance unique. Que vous soyez amateur d'histoire, de culture ou de gastronomie, Paris a tout à offrir.</p>
+
+            <!-- Informations pratiques -->
+            <div class="bg-white p-6 rounded-lg shadow-md mb-6" aria-labelledby="practical-info">
+                <h3 id="practical-info" class="text-2xl font-semibold mb-4" tabindex="0" aria-label="Informations pratiques">Informations pratiques</h3>
+                <ul class="space-y-2 text-lg" tabindex="0" aria-label="Liste des informations pratiques">
+                    <li><strong>Prix :</strong> 50 € par personne</li>
+                    <li><strong>Langues disponibles :</strong> Français, Anglais, Espagnol</li>
+                    <li><strong>Durée :</strong> 3 heures</li>
+                    <li><strong>Horaires :</strong> 10h00 - 13h00, tous les jours</li>
+                    <li><strong>Accessibilité :</strong> Accessible aux personnes à mobilité réduite</li>
+                </ul>
+            </div>
+
+            <!-- Call to Action Buttons -->
+            <div class="flex flex-wrap gap-4 mb-6">
+                <a href="#" class="inline-block bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold hover:bg-blue-800 focus:outline-none focus:ring-2 focus:ring-blue-300" aria-label="Réserver maintenant pour découvrir Paris">Réserver maintenant</a>
+                <a href="#" class="inline-block bg-gray-200 text-gray-800 px-6 py-3 rounded-lg text-lg font-semibold hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400" aria-label="Ajouter cette activité aux favoris">Ajouter aux favoris</a>
+            </div>
+        </section>
+
+        <!-- Section Détails -->
+        <section aria-labelledby="activity-details">
+            <h3 id="activity-details" class="text-2xl font-semibold mb-4" tabindex="0" aria-label="Détails de l'activité">Détails de l'activité</h3>
+            <p class="mb-4" tabindex="0">Pendant cette visite guidée, vous découvrirez les monuments incontournables de Paris, tels que la Tour Eiffel, le Louvre, et la Cathédrale Notre-Dame. Nos guides expérimentés vous emmèneront dans les coins cachés de la ville tout en vous partageant des anecdotes et des faits historiques passionnants.</p>
+            <p tabindex="0">La visite se termine par une croisière sur la Seine, offrant une vue imprenable sur les ponts et les bâtiments emblématiques de la capitale française.</p>
+        </section>
+    </main>
 </body>
 
 </html>

@@ -65,7 +65,7 @@
         vertical-align: top;
     }
 
-    .sub-nav h2 {
+    .sub-nav .h2 {
         font-size: 1.125rem;
         font-weight: bold;
         color: #3B82F6;
@@ -82,7 +82,7 @@
 </style>
 </head>
 
-<body>
+<body class="text-gray-900">
     <div role="navigation"
         class="relative bg-gray-600 w-full flex items-center focus-within:h-48 focus-within:md:h-16 h-0 px-3 overflow-hidden"
         aria-label="Accès rapide">
@@ -122,7 +122,7 @@
                 <button href="?page=logements" aria-expanded="false" aria-label="Types de logements" tabindex="2" aria-haspopup>Logements</button>
                 <div class="sub-nav">
                     <div>
-                        <h2 id="sub-nav-title">Hébergements conviviaux</h2>
+                        <a href="?page=activitees" class="h2" id="sub-nav-title">Hébergements conviviaux</a>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title">
                             <li><a href="?page=logements&type=auberges" tabindex="2.5">Auberges</a></li>
                             <li><a href="?page=logements&type=campings" tabindex="2.5">Campings</a></li>
@@ -130,7 +130,7 @@
                         </ul>
                     </div>
                     <div>
-                        <h2 id="sub-nav-title2">Hébergement haut de gamme</h2>
+                        <a href="?page=activitees" class="h2" id="sub-nav-title2">Hébergement haut de gamme</a>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title2">
                             <li><a href="?page=logements&type=hotels" tabindex="2.5">Hôtels</a></li>
                             <li><a href="?page=logements&type=villas" tabindex="2.5">Villas</a></li>
@@ -139,27 +139,27 @@
                 </div>
             </li>
             <li class="nav-item">
-                <button href="?page=activitees" aria-expanded="false" aria-label="activités" tabindex="2" aria-haspopup>Activitées</button>
+                <button aria-expanded="false" aria-label="activités" tabindex="2" aria-haspopup>Activitées</button>
                 <div class="sub-nav">
                     <div>
-                        <h2 id="sub-nav-title3">Activitées aquatiques</h2>
+                        <a href="?page=activitees" class="h2" id="sub-nav-title3">Activitées aquatiques</a>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title3">
-                            <li><a href="?page=activitees&type=surf" tabindex="2.5">Surf</a></li>
-                            <li><a href="?page=activitees&type=wakeboard" tabindex="2.5">Wakeboard</a></li>
-                            <li><a href="?page=activitees&type=plongeon" tabindex="2.5">Plongeon</a></li>
-                            <li><a href="?page=activitees&type=plongee" tabindex="2.5">Plongée</a></li>
-                            <li><a href="?page=activitees&type=kayak" tabindex="2.5">Kayak</a></li>
-                            <li><a href="?page=activitees&type=paddle" tabindex="2.5">Paddle</a></li>
+                            <li><a href="?page=activite&type=surf" tabindex="2.5">Surf</a></li>
+                            <li><a href="?page=activite&type=wakeboard" tabindex="2.5">Wakeboard</a></li>
+                            <li><a href="?page=activite&type=plongeon" tabindex="2.5">Plongeon</a></li>
+                            <li><a href="?page=activite&type=plongee" tabindex="2.5">Plongée</a></li>
+                            <li><a href="?page=activite&type=kayak" tabindex="2.5">Kayak</a></li>
+                            <li><a href="?page=activite&type=paddle" tabindex="2.5">Paddle</a></li>
                         </ul>
                     </div>
                     <div>
-                        <h2 id="sub-nav-title4">Activitées culturelles</h2>
+                        <a href="?page=activitees" class="h2" id="sub-nav-title4">Activitées culturelles</a>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title4">
-                            <li><a href="?page=activitees&type=musees" tabindex="2.5">Musées</a></li>
-                            <li><a href="?page=activitees&type=festivals" tabindex="2.5">Festivals</a></li>
-                            <li><a href="?page=activitees&type=expositions" tabindex="2.5">Expositions</a></li>
-                            <li><a href="?page=activitees&type=spectacles" tabindex="2.5">Spectacles</a></li>
-                            <li><a href="?page=activitees&type=litteraires" tabindex="2.5">Rencontres littéraires</a></li>
+                            <li><a href="?page=activite&type=musees" tabindex="2.5">Musées</a></li>
+                            <li><a href="?page=activite&type=festivals" tabindex="2.5">Festivals</a></li>
+                            <li><a href="?page=activite&type=expositions" tabindex="2.5">Expositions</a></li>
+                            <li><a href="?page=activite&type=spectacles" tabindex="2.5">Spectacles</a></li>
+                            <li><a href="?page=activite&type=litteraires" tabindex="2.5">Rencontres littéraires</a></li>
                         </ul>
                     </div>
                 </div>
