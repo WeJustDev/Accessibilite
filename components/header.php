@@ -121,7 +121,7 @@
             <li class="nav-item">
                 <button href="?page=logements" aria-expanded="false" aria-label="Types de logements" tabindex="2" aria-haspopup>Logements</button>
                 <div class="sub-nav">
-                    <div>
+                    <div class="flex flex-col gap-2">
                         <a href="?page=activitees" class="h2" id="sub-nav-title">Hébergements conviviaux</a>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title">
                             <li><a href="?page=logements&type=auberges" tabindex="2.5">Auberges</a></li>
@@ -129,7 +129,7 @@
                             <li><a href="?page=logements&type=hotes" tabindex="2.5">Maison d'hôtes</a></li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="flex flex-col gap-2">
                         <a href="?page=activitees" class="h2" id="sub-nav-title2">Hébergement haut de gamme</a>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title2">
                             <li><a href="?page=logements&type=hotels" tabindex="2.5">Hôtels</a></li>
@@ -141,7 +141,7 @@
             <li class="nav-item">
                 <button aria-expanded="false" aria-label="activités" tabindex="2" aria-haspopup>Activitées</button>
                 <div class="sub-nav">
-                    <div>
+                    <div class="flex flex-col gap-2">
                         <a href="?page=activitees" class="h2" id="sub-nav-title3">Activitées aquatiques</a>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title3">
                             <li><a href="?page=activite&type=surf" tabindex="2.5">Surf</a></li>
@@ -152,7 +152,7 @@
                             <li><a href="?page=activite&type=paddle" tabindex="2.5">Paddle</a></li>
                         </ul>
                     </div>
-                    <div>
+                    <div class="flex flex-col gap-2">
                         <a href="?page=activitees" class="h2" id="sub-nav-title4">Activitées culturelles</a>
                         <ul class="sub-nav-group" aria-labelledby="sub-nav-title4">
                             <li><a href="?page=activite&type=musees" tabindex="2.5">Musées</a></li>
