@@ -7,14 +7,14 @@ Ce qu'il faut !
 Rendre accessible ! :
 
 - [x] Header avec Menu
-- [ ] Formulaire
+- [x] Formulaire
 - [ ] Tableau complexe
-- [ ] Footer
+- [x] Footer
 - [ ] Fil d'ariane
 - [ ] Liens
-- [ ] Images
+- [x] Images
 - [ ] Vidéo (youtube)
-- [ ] plusieurs pages
+- [x] plusieurs pages
 - [ ] un title pour chaques pages
 
 - [ ] Le site doit être responsif
