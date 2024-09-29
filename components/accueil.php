@@ -50,7 +50,7 @@
             <div class="container mx-auto text-center px-4 md:px-0">
                 <h2 id="titre-activites" class="text-2xl md:text-3xl font-bold mb-8 fade-in">Partagez Vos Activités</h2>
                 <p class="text-base md:text-lg mb-8 max-w-2xl mx-auto fade-in">Que vous soyez un passionné de culture, un amoureux de la nature ou un gourmet, partagez vos expériences pour inspirer d'autres voyageurs.</p>
-                <a href="#" class="inline-block bg-green-500 text-white font-semibold py-3 px-6 md:px-8 rounded-full shadow-lg hover:bg-green-400 transition-all fade-in" aria-label="Poster une activité">Poster une activité</a>
+                <a href="../components/form-post.php" class="inline-block bg-green-500 text-white font-semibold py-3 px-6 md:px-8 rounded-full shadow-lg hover:bg-green-400 transition-all fade-in" aria-label="Poster une activité">Poster une activité</a>
             </div>
         </section>
 
@@ -60,15 +60,35 @@
                 <div class="bg-white p-8 rounded-lg shadow-lg text-center fade-in" role="form" aria-labelledby="titre-creer-compte">
                     <h2 id="titre-creer-compte" class="text-2xl md:text-3xl font-bold mb-4">Créez un Compte</h2>
                     <p class="mb-6">Rejoignez notre communauté pour partager vos aventures et découvrir des lieux uniques.</p>
-                    <a href="#" class="bg-blue-500 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-blue-400 transition-all" aria-label="Créer un compte">S'inscrire</a>
+                    <a href="../components/form-inscription.php" class="bg-blue-500 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-blue-400 transition-all" aria-label="Créer un compte">S'inscrire</a>
                 </div>
                 <div class="bg-white p-8 rounded-lg shadow-lg text-center fade-in" role="form" aria-labelledby="titre-connexion">
                     <h2 id="titre-connexion" class="text-2xl md:text-3xl font-bold mb-4">Déjà Membre ?</h2>
                     <p class="mb-6">Connectez-vous pour accéder à votre profil et consulter vos activités enregistrées.</p>
-                    <a href="#" class="bg-gray-500 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-400 transition-all" aria-label="Se connecter">Se connecter</a>
+                    <a href="../components/form-connexion.php" class="bg-gray-500 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-400 transition-all" aria-label="Se connecter">Se connecter</a>
                 </div>
             </div>
         </section>
+
+        <!-- Section Vidéo -->
+<!-- Section Vidéo -->
+<section id="video" class="py-16" aria-labelledby="titre-video" role="region">
+    <div class="container mx-auto text-center px-4 md:px-0">
+        <h2 id="titre-video" class="text-2xl md:text-3xl font-bold mb-4 fade-in">Regardez Notre Vidéo</h2>
+        <div class="relative w-full max-w-2xl mx-auto">
+            <video controls class="border border-gray-500 rounded-lg w-full h-auto" aria-labelledby="titre-video" aria-label="Vidéo présentant les activités et attractions touristiques en France">
+                <source src="../src/images/spot-video-accueil.mp4" type="video/mp4">
+                <track src="../src/images/sous-titres.vtt" kind="subtitles" srclang="fr" label="Français" default>
+                <track src="../src/images/description-audio.vtt" kind="descriptions" srclang="fr" label="Description audio">
+                Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+        </div>
+        <p class="mt-2 text-lg px-4 md:px-24">Découvrez les merveilles de la France à travers cette vidéo ! Cette vidéo montre diverses activités touristiques, notamment des paysages, des événements culturels et des attractions célèbres.</p>
+    </div>
+</section>
+
+
+
     </main>
 
     <!-- Footer -->
