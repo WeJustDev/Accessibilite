@@ -4,62 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../dist/main.css">
-    <script src="../dist/main.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/css/accueil.css">
     <title>Voyage En France</title>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-gray-200 pt-5" aria-label="Bannière principale">
-        <div class="mx-auto w-full h-52 p-5 flex flex-col justify-center items-start">
-            <h1 class="text-4xl font-bold text-left">Voyage En France</h1>
-            <p class="w-3/5 pt-7 pb-7 text-md font-bold text-black-500">
-                Le site Voyage En France vise à rassembler les meilleurs bons plans et activités à faire dans les
-                villes françaises. Les utilisateurs peuvent partager leurs expériences et aider d'autres à profiter
-                au maximum de leur voyage.
-            </p>
-            <button class="rounded-full bg-slate-50 p-3 pl-5 pr-5 text-black">En profiter</button>
+<body class="bg-white text-gray-800 font-sans leading-relaxed">
+    <!-- Header -->
+    <header class="bg-blue-500 text-white py-8" role="banner">
+        <div class="container mx-auto text-center px-4 md:px-0">
+            <h1 class="text-3xl md:text-5xl font-bold mb-4 fade-in">Voyage En France</h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto fade-in">Découvrez les meilleures activités et bons plans pour voyager en France, partagés par notre communauté d'explorateurs.</p>
+            <a href="#" class="mt-6 inline-block bg-yellow-400 text-black font-semibold py-3 px-6 md:px-8 rounded-full shadow-lg hover:bg-yellow-300 transition-all fade-in" aria-label="Explorer les activités">Explorez Maintenant</a>
         </div>
     </header>
-    <main class="max-w-6xl mx-auto my-8 p-4">
-        <section id="actualités" class="mb-20">
-            <h2 class="text-2xl font-semibold mb-4">Nos Actualités</h2>
-            <p>Les dernières activités postées</p>
-        </section>
-        
-        <section id="activités" class="mb-20">
-            <div class="flex justify-center items-center gap-6">
-                <div class="w-96 h-1/2 overflow-hidden rounded-xl">
-                    <img src="activite1.jpg" alt="" class="">
-                </div>
-                <div class="text-center mx-auto p-5 h-64 w-1/3 bg-gray-200 flex flex-col items-center justify-center rounded-2xl">
-                    <h2 class="text-2xl font-semibold mb-4">Vous aussi commencez à poster des activités !</h2>
-                    <p>Partagez vos expériences, vos émotions et vos vacances.</p>
-                    <button class="rounded-full bg-yellow-500 p-3 pl-5 pr-5 mt-4">Poster une activité</button>
-                </div>
-                <div class="w-96 h-1/2 overflow-hidden rounded-xl">
-                    <img src="activite2.jpg" alt="" class="">
-                </div>
-            </div>
 
-        </section>
-        
-        <section id="connexion" class="max-w-4xl mx-auto mb-20 flex items-center justify-center text-center">
-            <div class="w-full bg-slate-100">
-                <h2 class="text-2xl font-semibold mb-4">Créez vous un compte</h2>
-                <p class="text-left">Inscrivez-vous pour partager vos expériences et découvrir les bons plans des autres voyageurs.</p>
-                <button class="rounded-full bg-blue-500 p-3 pl-5 pr-5 text-white mt-4">Créer un compte</button>
+    <!-- Main content -->
+    <main role="main">
+        <!-- Section Actualités -->
+        <section id="actualites" class="py-16 section-bg" aria-labelledby="titre-actualites" role="region">
+            <div class="container mx-auto text-center px-4 md:px-0">
+                <h2 id="titre-actualites" class="text-2xl md:text-3xl font-bold mb-8 slide-in">Dernières Actualités</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article class="bg-white shadow-lg rounded-lg p-6 hover-shift" role="article" aria-labelledby="titre-activite1">
+                        <img src="../src/images/activite1.jpg" alt="Plage secrète bordée d'eau turquoise sur la côte Atlantique" class="rounded-t-lg w-full h-48 object-cover mb-4">
+                        <h3 id="titre-activite1" class="text-xl md:text-2xl font-semibold">Découverte des plages secrètes</h3>
+                        <p class="mt-2">Explorez les joyaux cachés de la côte Atlantique. Idéal pour les amateurs de tranquillité.</p>
+                    </article>
+                    <article class="bg-white shadow-lg rounded-lg p-6 hover-shift" role="article" aria-labelledby="titre-activite2">
+                        <img src="../src/images/activite2.jpg" alt="Champs de lavande en Provence sous un ciel bleu" class="rounded-t-lg w-full h-48 object-cover mb-4">
+                        <h3 id="titre-activite2" class="text-xl md:text-2xl font-semibold">Randonnée en Provence</h3>
+                        <p class="mt-2">Une balade au cœur des champs de lavande, avec des vues imprenables sur le paysage provençal.</p>
+                    </article>
+                    <article class="bg-white shadow-lg rounded-lg p-6 hover-shift" role="article" aria-labelledby="titre-activite3">
+                        <img src="../src/images/activite3.jpg" alt="Château de la Loire avec une rivière et un ciel ensoleillé" class="rounded-t-lg w-full h-48 object-cover mb-4">
+                        <h3 id="titre-activite3" class="text-xl md:text-2xl font-semibold">Visite des châteaux de la Loire</h3>
+                        <p class="mt-2">Plongez dans l'histoire en visitant les magnifiques châteaux au bord de la Loire.</p>
+                    </article>
+                </div>
             </div>
-            <div class="w-full">
-                <h2 class="text-2xl font-semibold mb-4">Déjà membre ?</h2>
-                <p class="text-left">Connectez-vous pour partager vos expériences et découvrir les bons plans des autres voyageurs.</p>
-                <button class="rounded-full bg-slate-300 p-3 pl-5 pr-5 text-black mt-4">Se connecter</button>
+        </section>
+
+        <!-- Section Partagez vos Activités -->
+        <section id="activites" class="py-16 bg-gray-100" aria-labelledby="titre-activites" role="region">
+            <div class="container mx-auto text-center px-4 md:px-0">
+                <h2 id="titre-activites" class="text-2xl md:text-3xl font-bold mb-8 fade-in">Partagez Vos Activités</h2>
+                <p class="text-base md:text-lg mb-8 max-w-2xl mx-auto fade-in">Que vous soyez un passionné de culture, un amoureux de la nature ou un gourmet, partagez vos expériences pour inspirer d'autres voyageurs.</p>
+                <a href="../components/form-post.php" class="inline-block bg-green-500 text-white font-semibold py-3 px-6 md:px-8 rounded-full shadow-lg hover:bg-green-400 transition-all fade-in" aria-label="Poster une activité">Poster une activité</a>
             </div>
         </section>
+
+        <!-- Section Inscription/Connexion -->
+        <section id="auth" class="py-16 section-bg" aria-labelledby="titre-auth" role="region">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-0">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center fade-in" role="form" aria-labelledby="titre-creer-compte">
+                    <h2 id="titre-creer-compte" class="text-2xl md:text-3xl font-bold mb-4">Créez un Compte</h2>
+                    <p class="mb-6">Rejoignez notre communauté pour partager vos aventures et découvrir des lieux uniques.</p>
+                    <a href="../components/form-inscription.php" class="bg-blue-500 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-blue-400 transition-all" aria-label="Créer un compte">S'inscrire</a>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center fade-in" role="form" aria-labelledby="titre-connexion">
+                    <h2 id="titre-connexion" class="text-2xl md:text-3xl font-bold mb-4">Déjà Membre ?</h2>
+                    <p class="mb-6">Connectez-vous pour accéder à votre profil et consulter vos activités enregistrées.</p>
+                    <a href="../components/form-connexion.php" class="bg-gray-500 text-white font-semibold py-3 px-6 rounded-full shadow-lg hover:bg-gray-400 transition-all" aria-label="Se connecter">Se connecter</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Vidéo -->
+<!-- Section Vidéo -->
+<section id="video" class="py-16" aria-labelledby="titre-video" role="region">
+    <div class="container mx-auto text-center px-4 md:px-0">
+        <h2 id="titre-video" class="text-2xl md:text-3xl font-bold mb-4 fade-in">Regardez Notre Vidéo</h2>
+        <div class="relative w-full max-w-2xl mx-auto">
+            <video controls class="border border-gray-500 rounded-lg w-full h-auto" aria-labelledby="titre-video" aria-label="Vidéo présentant les activités et attractions touristiques en France">
+                <source src="../src/images/spot-video-accueil.mp4" type="video/mp4">
+                <track src="../src/images/sous-titres.vtt" kind="subtitles" srclang="fr" label="Français" default>
+                <track src="../src/images/description-audio.vtt" kind="descriptions" srclang="fr" label="Description audio">
+                Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+        </div>
+        <p class="mt-2 text-lg px-4 md:px-24">Découvrez les merveilles de la France à travers cette vidéo ! Cette vidéo montre diverses activités touristiques, notamment des paysages, des événements culturels et des attractions célèbres.</p>
+    </div>
+</section>
+
+
+
     </main>
 
-    <footer class="bg-gray-800 text-white p-4">
-        <p>&copy; 2024 Voyage En France. Tous droits réservés.</p>
+    <!-- Footer -->
+    <footer class="bg-blue-500 text-white py-8" role="contentinfo">
+        <div class="container mx-auto text-center px-4 md:px-0">
+            <p>&copy; 2024 Voyage En France. Tous droits réservés.</p>
+            <p>Créé avec passion pour les voyageurs.</p>
+        </div>
     </footer>
 </body>
 
