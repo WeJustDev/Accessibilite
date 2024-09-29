@@ -12,7 +12,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : null;
 </head>
 
 <body>
-    <?php include "./components/header.php"; ?>
+    <?php include "./components/header.html"; ?>
 
     <main role="main" id="contenu" tabindex="-1">
         <?php
@@ -22,15 +22,15 @@ $page = isset($_GET['page']) ? $_GET['page'] : null;
             if (file_exists($filePath)) {
                 include $filePath;
             } else {
-                include './components/accueil.php';
+                include './components/accueil.html';
             }
         } else {
-            include './components/accueil.php';
+            include './components/accueil.html';
         }
         ?>
     </main>
 
-    <?php include "./components/footer.php" ?>
+    <?php include "./components/footer.html" ?>
 
     <!-- include jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
