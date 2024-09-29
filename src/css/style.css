@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('/src/fonts/OpenDyslexic-Regular.woff2') format('woff2'),
+         url('/src/fonts/OpenDyslexic-Regular.woff') format('woff'),
+         url('/src/fonts/OpenDyslexic-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /* import styles de base Tailwind */
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
@@ -5,4 +14,12 @@
 
 /* import des feuilles de style */
 @import './base.scss'; 
-@import './megamenu.scss';
+@import './megamenu.scss'; 
+
+
+/* Styles pour le mode dyslexique */
+body.dyslexic-mode {
+    font-family: 'OpenDyslexic', Arial, sans-serif !important;
+    background-color: #f5f5f5;
+    color: #333;
+}
