@@ -15,6 +15,7 @@
 /* import des feuilles de style */
 @import './base.scss'; 
 @import './megamenu.scss'; 
+@import './table.scss';
 
 
 /* Styles pour le mode dyslexique */

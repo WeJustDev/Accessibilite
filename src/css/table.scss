@@ -1,0 +1,11 @@
+#tableNuitees {
+    td,
+    th {
+        &:focus {
+            background-color: red;
+        }
+        &:hover {
+            background-color: grey;
+        }
+    }
+}
