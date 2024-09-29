@@ -1,196 +1,171 @@
-<!DOCTYPE html>
-<html lang="fr">
+<style>
+    /* Rudimentary CSS for demonstration */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="./dist/main.css" rel="stylesheet">
-    <script src="/src/js/jquery-accessibleMegaMenu.js"></script>
-    <script src="/src/js/main.js"></script>
-    <title>Document</title>
-    <style>
-        /* Rudimentary mega menu CSS for demonstration */
+    /* mega menu list */
+    .nav-menu {
+        display: flex;
+        list-style: none;
+        position: relative;
+        z-index: 15;
+    }
 
-        /* mega menu list */
-        .nav-menu {
-            display: block;
-            position: relative;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            z-index: 15;
-        }
+    /* a top level navigation item in the mega menu */
+    .nav-item {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
-        /* a top level navigation item in the mega menu */
-        .nav-item {
-            list-style: none;
-            display: inline-block;
-            padding: 0;
-            margin: 0;
-        }
+    /* first descendant link within a top level navigation item */
+    .nav-item>a, .nav-item>button {
+        border: 1px solid transparent;
+        display: inline-block;
+        margin: 0 0 -1px 0;
+        padding: 0.5em 1em;
+        position: relative;
+    }
 
-        /* first descendant link within a top level navigation item */
-        .nav-item > a {
-            position: relative;
-            display: inline-block;
-            padding: 0.5em 1em;
-            margin: 0 0 -1px 0;
-            border: 1px solid transparent;
-        }
+    /* focus/open states of first descendant link within a top level navigation item */
+    .nav-item>a:focus,
+    .nav-item>a.open {
+        border: 1px solid #dedede;
+    }
 
-        /* focus/open states of first descendant link within a top level
-           navigation item */
-        .nav-item > a:focus,
-        .nav-item > a.nav-menu-open {
-            border: 1px solid #dedede;
-        }
+    /* open state of first descendant link within a top level 
+     navigation item */
+    .nav-item>a.open {
+        background-color: #fff;
+        border-bottom: none;
+        z-index: 1;
+    }
 
-        /* open state of first descendant link within a top level
-           navigation item */
-        .nav-item > a.nav-menu-open {
-            background-color: #fff;
-            border-bottom: none;
-            z-index: 1;
-        }
+    /* sub-navigation panel */
+    .sub-nav {
+        background-color: #fff;
+        border: 1px solid #dedede;
+        display: none;
+        gap: 1rem;
+        margin-top: 37px;
+        padding: 0.5em 1em;
+        position: absolute;
+        top: 2.2em;
+    }
 
-        /* sub-navigation panel */
-        .sub-nav {
-            position: absolute;
-            display: none;
-            top: 2.6em;
-            margin-top: -1px;
-            padding: 0.5em 1em;
-            border: 1px solid #dedede;
-            background-color: #fff;
-        }
+    /* sub-navigation panel open state */
+    .sub-nav.open {
+        display: flex;
+    }
 
-        /* sub-navigation panel open state */
-        .sub-nav.nav-menu-open {
-            display: block;
-        }
+    /* list of items within sub-navigation panel */
+    .sub-nav ul {
+        display: inline-block;
+        margin: 0 1em 0 0;
+        padding: 0;
+        vertical-align: top;
+    }
 
-        /* list of items within sub-navigation panel */
-        .sub-nav ul {
-            display: inline-block;
-            vertical-align: top;
-            margin: 0 1em 0 0;
-            padding: 0;
-        }
+    .sub-nav .h2 {
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #3B82F6;
+    }
 
-        /* list item within sub-navigation panel */
-        .sub-nav li {
-            display: block;
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    /* list item within sub-navigation panel */
+    .sub-nav li {
+        display: block;
+        line-height: 2;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+</style>
 </head>
 
-<body>
+<body class="text-gray-900">
     <div role="navigation"
         class="relative bg-gray-600 w-full flex items-center focus-within:h-48 focus-within:md:h-16 h-0 px-3 overflow-hidden"
         aria-label="Accès rapide">
         <ul class="flex gap-5 flex-col md:flex-row md:items-center justify-center h-full w-full overflow-hidden px-2">
             <li>
-                <a href="#search" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false">Barre de
+                <a href="#search" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Barre de
                     recherche</a>
             </li>
             <li>
-                <a href="#nav" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false">Menu de
+                <a href="#nav" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Menu de
                     navigation</a>
             </li>
             <li>
-                <a href="#contenu" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false">Aller au
+                <a href="#contenu" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Aller au
                     contenu</a>
             </li>
             <li>
-                <a href="#footer" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false">Pied de
+                <a href="#footer" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Pied de
                     page</a>
             </li>
         </ul>
     </div>
 
-    <nav id="test-nav-menu">
-        <ul class="nav-menu">
+    <div class="flex flex-col gap-3 fixed top-52 bg-yellow-400 p-6 right-0" >
+        <div>
+            <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique" tabindex="3" class="cursor-pointer">
+            <label for="dyslexic-mode-toggle" class="cursor-pointer">Mode dyslexique</label>
+        </div>
+    </div>
+
+    <nav id="nav" class="megamenu" aria-label="Navigation principale">
+        <ul class="nav-menu container mx-auto flex flex-row gap-3 items-center justify-center p-4">
             <li class="nav-item">
-                <a href="?movie">Movies</a>
+                <a href="/" aria-label="Page d'accueil" tabindex="2">Accueil</a>
+            </li>
+            <li class="nav-item">
+                <button href="?page=logements" aria-expanded="false" aria-label="Types de logements" tabindex="2" aria-haspopup>Logements</button>
                 <div class="sub-nav">
-                    <ul class="sub-nav-group">
-                        <li><a href="?movie&genre=0">Action &amp; Adventure</a></li>
-                        <li><a href="?movie&genre=2">Children &amp; Family</a></li>
-                        <li>&#8230;</li>
-                    </ul>
-                    <ul class="sub-nav-group">
-                        <li><a href="?movie&genre=7">Dramas</a></li>
-                        <li><a href="?movie&genre=9">Foreign</a></li>
-                        <li>&#8230;</li>
-                    </ul>
-                    <ul class="sub-nav-group">
-                        <li><a href="?movie&genre=14">Musicals</a></li>
-                        <li><a href="?movie&genre=15">Romance</a></li>
-                        <li>&#8230;</li>
-                    </ul>
+                    <div class="flex flex-col gap-2">
+                        <a href="?page=activitees" class="h2" id="sub-nav-title">Hébergements conviviaux</a>
+                        <ul class="sub-nav-group" aria-labelledby="sub-nav-title">
+                            <li><a href="?page=logements&type=auberges" tabindex="2.5">Auberges</a></li>
+                            <li><a href="?page=logements&type=campings" tabindex="2.5">Campings</a></li>
+                            <li><a href="?page=logements&type=hotes" tabindex="2.5">Maison d'hôtes</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="?page=activitees" class="h2" id="sub-nav-title2">Hébergement haut de gamme</a>
+                        <ul class="sub-nav-group" aria-labelledby="sub-nav-title2">
+                            <li><a href="?page=logements&type=hotels" tabindex="2.5">Hôtels</a></li>
+                            <li><a href="?page=logements&type=villas" tabindex="2.5">Villas</a></li>
+                        </ul>
+                    </div>
                 </div>
             </li>
             <li class="nav-item">
-                <a href="?tv">TV Shows</a>
+                <button aria-expanded="false" aria-label="activités" tabindex="2" aria-haspopup>Activitées</button>
                 <div class="sub-nav">
-                    <ul class="sub-nav-group">
-                        <li><a href="?tv&genre=20">Classic TV</a></li>
-                        <li><a href="?tv&genre=21">Crime TV</a></li>
-                        <li>&#8230;</li>
-                    </ul>
-                    <ul class="sub-nav-group">
-                        <li><a href="?tv&genre=27">Reality TV</a></li>
-                        <li><a href="?tv&genre=30">TV Action</a></li>
-                        <li>&#8230;</li>
-                    </ul>
-                    <ul class="sub-nav-group">
-                        <li><a href="?tv&genre=33">TV Dramas</a></li>
-                        <li><a href="?tv&genre=34">TV Horror</a></li>
-                        <li>&#8230;</li>
-                    </ul>
+                    <div class="flex flex-col gap-2">
+                        <a href="?page=activitees" class="h2" id="sub-nav-title3">Activitées aquatiques</a>
+                        <ul class="sub-nav-group" aria-labelledby="sub-nav-title3">
+                            <li><a href="?page=activite&type=surf" tabindex="2.5">Surf</a></li>
+                            <li><a href="?page=activite&type=wakeboard" tabindex="2.5">Wakeboard</a></li>
+                            <li><a href="?page=activite&type=plongeon" tabindex="2.5">Plongeon</a></li>
+                            <li><a href="?page=activite&type=plongee" tabindex="2.5">Plongée</a></li>
+                            <li><a href="?page=activite&type=kayak" tabindex="2.5">Kayak</a></li>
+                            <li><a href="?page=activite&type=paddle" tabindex="2.5">Paddle</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <a href="?page=activitees" class="h2" id="sub-nav-title4">Activitées culturelles</a>
+                        <ul class="sub-nav-group" aria-labelledby="sub-nav-title4">
+                            <li><a href="?page=activite&type=musees" tabindex="2.5">Musées</a></li>
+                            <li><a href="?page=activite&type=festivals" tabindex="2.5">Festivals</a></li>
+                            <li><a href="?page=activite&type=expositions" tabindex="2.5">Expositions</a></li>
+                            <li><a href="?page=activite&type=spectacles" tabindex="2.5">Spectacles</a></li>
+                            <li><a href="?page=activite&type=litteraires" tabindex="2.5">Rencontres littéraires</a></li>
+                        </ul>
+                    </div>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a href="?page=utilisateur" tabindex="2">Espace utilisateur</a>
             </li>
         </ul>
     </nav>
-
-    <main role="main" id="contenu" tabindex="-1">
-        ...
-    </main>
-
-    <!-- include jquery -->
-    <script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
-
-    <script>
-        $("nav#test-nav-menu").accessibleMegaMenu({
-            /* prefix for generated unique id attributes, which are required
-               to indicate aria-owns, aria-controls and aria-labelledby */
-            uuidPrefix: "accessible-megamenu",
-
-            /* css class used to define the megamenu styling */
-            menuClass: "nav-menu",
-
-            /* css class for a top-level navigation item in the megamenu */
-            topNavItemClass: "nav-item",
-
-            /* css class for a megamenu panel */
-            panelClass: "sub-nav",
-
-            /* css class for a group of items within a megamenu panel */
-            panelGroupClass: "sub-nav-group",
-
-            /* css class for the hover state */
-            hoverClass: "nav-menu-hover",
-
-            /* css class for the focus state */
-            focusClass: "nav-menu-focus",
-
-            /* css class for the open state */
-            openClass: "nav-menu-open"
-        });
-    </script>
-</body>
-
-</html>

@@ -6,17 +6,17 @@ Ce qu'il faut !
 
 Rendre accessible ! :
 
-- [ ] Header avec Menu
-- [ ] Formulaire
+- [x] Header avec Menu
+- [x] Formulaire
 - [ ] Tableau complexe
-- [ ] Footer
-- [ ] Fil d'ariane
+- [x] Footer
+- [x] Fil d'ariane
 - [ ] Liens
-- [ ] Images
+- [x] Images
 - [ ] Vidéo (youtube)
-- [ ] plusieurs pages
+- [x] plusieurs pages
 - [ ] un title pour chaques pages
-
+- [ ] barre de recherche
 - [ ] Le site doit être responsif
 
 -   [lien vers le cour](https://intra.iha.unistra.fr/doku.php?id=intranet_qlio:wahl-cours-qlio)
