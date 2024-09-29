@@ -10,13 +10,13 @@ Rendre accessible ! :
 - [x] Formulaire
 - [ ] Tableau complexe
 - [x] Footer
-- [ ] Fil d'ariane
+- [x] Fil d'ariane
 - [ ] Liens
 - [x] Images
 - [ ] Vidéo (youtube)
 - [x] plusieurs pages
 - [ ] un title pour chaques pages
-
+- [ ] barre de recherche
 - [ ] Le site doit être responsif
 
 -   [lien vers le cour](https://intra.iha.unistra.fr/doku.php?id=intranet_qlio:wahl-cours-qlio)
