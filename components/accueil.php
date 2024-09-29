@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang="fr">
+    <script scr="../src/css/accueil.css"></script>
+    <title>Page d'accueil - Voyage En France</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../src/css/accueil.css">
-    <title>Voyage En France</title>
-</head>
-
-<body class="bg-white text-gray-800 font-sans leading-relaxed">
-    <!-- Header -->
     <header class="bg-blue-500 text-white py-8" role="banner">
         <div class="container mx-auto text-center px-4 md:px-0">
             <h1 class="text-3xl md:text-5xl font-bold mb-4 fade-in">Voyage En France</h1>
             <p class="text-lg md:text-xl max-w-2xl mx-auto fade-in">Découvrez les meilleures activités et bons plans pour voyager en France, partagés par notre communauté d'explorateurs.</p>
-            <a href="#" class="mt-6 inline-block bg-yellow-400 text-black font-semibold py-3 px-6 md:px-8 rounded-full shadow-lg hover:bg-yellow-300 transition-all fade-in" aria-label="Explorer les activités">Explorez Maintenant</a>
+            <a href="?page=activitees" class="mt-6 inline-block bg-yellow-400 text-black font-semibold py-3 px-6 md:px-8 rounded-full shadow-lg hover:bg-yellow-300 transition-all fade-in" aria-label="Explorer les activités">Explorez Maintenant</a>
         </div>
     </header>
 
@@ -50,7 +40,7 @@
             <div class="container mx-auto text-center px-4 md:px-0">
                 <h2 id="titre-activites" class="text-2xl md:text-3xl font-bold mb-8 fade-in">Partagez Vos Activités</h2>
                 <p class="text-base md:text-lg mb-8 max-w-2xl mx-auto fade-in">Que vous soyez un passionné de culture, un amoureux de la nature ou un gourmet, partagez vos expériences pour inspirer d'autres voyageurs.</p>
-                <a href="../components/form-post.php" class="inline-block bg-green-500 text-white font-semibold py-3 px-6 md:px-8 rounded-full shadow-lg hover:bg-green-400 transition-all fade-in" aria-label="Poster une activité">Poster une activité</a>
+                <a href="?page=form-post" class="inline-block bg-[#106046] text-white font-semibold py-3 px-6 md:px-8 rounded-full shadow-lg hover:bg-[#193a2f] transition-all fade-in" aria-label="Poster une activité">Poster une activité</a>
             </div>
         </section>
 
@@ -86,18 +76,3 @@
         <p class="mt-2 text-lg px-4 md:px-24">Découvrez les merveilles de la France à travers cette vidéo ! Cette vidéo montre diverses activités touristiques, notamment des paysages, des événements culturels et des attractions célèbres.</p>
     </div>
 </section>
-
-
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-blue-500 text-white py-8" role="contentinfo">
-        <div class="container mx-auto text-center px-4 md:px-0">
-            <p>&copy; 2024 Voyage En France. Tous droits réservés.</p>
-            <p>Créé avec passion pour les voyageurs.</p>
-        </div>
-    </footer>
-</body>
-
-</html>

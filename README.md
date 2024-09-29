@@ -15,7 +15,7 @@ Rendre accessible ! :
 - [x] Images
 - [ ] Vidéo (youtube)
 - [x] plusieurs pages
-- [ ] un title pour chaques pages
+- [x] un title pour chaques pages
 - [ ] barre de recherche
 - [ ] Le site doit être responsif
 
