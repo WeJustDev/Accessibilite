@@ -12,7 +12,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : null;
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body>
+<body class="min-h-[100vh]">
     <?php include "./components/header.html"; ?>
 
     <main role="main" id="contenu" tabindex="-1">
