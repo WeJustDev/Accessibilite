@@ -19,7 +19,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : null;
         <?php
         if ($page) {
             $filePath = './components/' . $page . '.php';
-    
+
             if (file_exists($filePath)) {
                 include $filePath;
             } else {
