@@ -1,4 +1,4 @@
-<title>Page des activitées - Voyage en France</title>
+<title>Page des activités - Voyage en France</title>
 
 <?php
 $breadcrumbs = [

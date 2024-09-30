@@ -19,7 +19,7 @@ include 'components/ariane.php';
 <div role="navigation" aria-label="Plan du site" class="plan container mx-auto">
     <h1 class="text-2xl text-gray-900 mb-6">Plan du site</h1>
     <ul role="list" aria-labelledby="activites">
-        <h2 id="activites" class="text-2xl font-bold text-blue-500">Activitées</h2>
+        <h2 id="activites" class="text-2xl font-bold text-blue-500">Activités</h2>
         <li role="listitem" class="ml-4 md:ml-10">
             <a href="?page=activitees" class="h2 text-xl font-bold text-blue-500" id="sub-nav-title89">Activités aquatiques</a>
             <ul aria-labelledby="sub-nav-title89" role="list" class="ml-4 md:ml-10">
