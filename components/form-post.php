@@ -3,7 +3,7 @@
 
 <?php
 $breadcrumbs = [
-    ['text' => 'Accueil', 'link' => '/'],
+    ['text' => 'Accueil', 'link' => '?page=home'],
     ['text' => 'Ajout d\'activité']
 ];
 

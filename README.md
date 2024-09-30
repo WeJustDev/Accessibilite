@@ -11,12 +11,12 @@ Rendre accessible ! :
 - [ ] Tableau complexe
 - [x] Footer
 - [x] Fil d'ariane
-- [ ] Liens (refaire un tour sur tous les liens)
+- [x] Liens (refaire un tour sur tous les liens)
 - [x] Images
-- [ ] Vidéo (youtube)
+- [x] Vidéo (youtube)
 - [x] plusieurs pages
 - [x] un title pour chaques pages
-- [ ] barre de recherche
+- [x] barre de recherche
 - [x] Le site doit être responsif
 - [ ] Header responsive
 - [ ] Page accessibilité
