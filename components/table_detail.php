@@ -2,6 +2,9 @@
     <h1 id="mainTitle" tabindex="5"> Nuitées de la saison d’été 2022 et évolution entre 2019 et 2022 par département de la bretagne selon le type d’hébergement</h1>
 </header>
 
+<title>Tableau de statistiques détails - Voyages en France</title>
+
+
 <?php
 $breadcrumbs = [
     ['text' => 'Accueil', 'link' => '?page=home'],

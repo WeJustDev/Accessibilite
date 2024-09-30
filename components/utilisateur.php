@@ -107,6 +107,7 @@ include 'components/ariane.php';
     <div class="relative z-0 w-full mb-6 group">
         <label for="floating_email" class="block text-sm font-medium text-gray-700">Adresse Email</label>
         <input type="email" name="floating_email" id="floating_email" aria-required="true" aria-invalid="false"
+            pattern=".+@example\.com"
             aria-describedby="emailError"
             class="block w-full px-4 py-2 mt-1 text-base text-gray-900 bg-white border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
             placeholder="Votre email" required />

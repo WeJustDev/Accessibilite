@@ -23,6 +23,8 @@
     </style>
 </head>
 
+<title>Tableau de statistiques - Voyages en France</title>
+
 <?php
 $breadcrumbs = [
     ['text' => 'Accueil', 'link' => '?page=home'],
@@ -33,12 +35,11 @@ include 'components/ariane.php';
 ?>
 
 <div class="container mx-auto">
-    <ul class="sr-only">
-        <li clas="hidden lg:block"><a href="#tableNuitees" tabindex="5">Acceder au tableau des nuitées en bretagne en 2022</a></li>
-        <li class="hidden md:block lg:hidden"><a href="#tableMid" tabindex="5">Acceder au tableau des nuitées en bretagne en 2022</a></li>
-        <li class="block sm:hidden"><a href="#tableSmall" tabindex="5">Acceder au tableau des nuitées en bretagne en 2022</a></li>
-        <li><a href="#detailTableau" tabindex="5">Accès direct à la description detaillé du tableau</a></li>
-    </ul>
+
+<h1>Les nuités en bretagne</h1>
+<a href="?page=table_detail" aria-labelledby="explicationTableau" class="sr-only" id="detailTableau">Lien vers l'explication détaillée du tableau</a>
+<p id="explicationTableau" class="sr-only">Ce lien mène à une explication détaillée des données du tableau.</p>
+
     <table aria-describedby="tableDescription" class="min-w-full table-auto border-collapse hidden lg:block" id="tableNuitees" tabindex="5">
         <caption class="text-lg font-semibold my-4 text-center">
             Nuitées de la saison d’été 2022 et évolution entre 2019 et 2022 par département de la bretagne selon le type d’hébergement
@@ -498,6 +499,5 @@ include 'components/ariane.php';
     </div>
 
     <!-- Lien vers explication détaillée -->
-    <a href="?page=table_detail" aria-labelledby="explicationTableau" class="sr-only" id="detailTableau">Lien vers l'explication détaillée du tableau</a>
-    <p id="explicationTableau" class="sr-only">Ce lien mène à une explication détaillée des données du tableau.</p>
+    
 </div>

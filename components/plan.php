@@ -43,7 +43,7 @@ include 'components/ariane.php';
     <ul>
         <h2 id="logements" class="text-2xl font-bold text-blue-500">Logements</h2>
         <li role="listitem" class="ml-4 md:ml-10">
-            <a href="?page=activitees" class="h2 text-xl font-bold text-blue-500" id="sub-nav-title99">Hébergements conviviaux</a>
+            <h3><a href="?page=activitees" class="h2 text-xl font-bold text-blue-500" id="sub-nav-title99">Hébergements conviviaux</a></h3>
             <ul aria-labelledby="sub-nav-title99" role="list" class="ml-4 md:ml-10">
                 <li role="listitem"><a href="?page=activitees&type=musees">Auberges</a></li>
                 <li role="listitem"><a href="?page=activitees&type=festivals">Campings</a></li>
@@ -51,7 +51,7 @@ include 'components/ariane.php';
             </ul>
         </li>
         <li role="listitem" class="ml-4 md:ml-10">
-            <a href="?page=activitees" class="h2 text-xl font-bold text-blue-500" id="sub-nav-title98">Hébergements haut de gamme</a>
+            <h3><a href="?page=activitees" class="h2 text-xl font-bold text-blue-500" id="sub-nav-title98">Hébergements haut de gamme</a></h3>
             <ul aria-labelledby="sub-nav-title98" role="list" class="ml-4 md:ml-10">
                 <li role="listitem" ><a href="?page=activitees&type=musees">Hôtels</a></li>
                 <li role="listitem" ><a href="?page=activitees&type=festivals">Villas</a></li>

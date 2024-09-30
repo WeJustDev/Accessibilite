@@ -81,7 +81,7 @@ include 'components/ariane.php';
         <!-- Carte 1 -->
         <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
             <a href="?page=activite">
-                <img class="rounded-t-lg" src="./src/img/paris.webp" alt="Visiter Paris" />
+                <img class="rounded-t-lg" src="./src/img/paris.webp" alt="" />
             </a>
             <div class="p-5">
                 <a href="?page=activite">
@@ -102,9 +102,9 @@ include 'components/ariane.php';
         </div>
 
         <!-- Carte 2 -->
-        <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
+        <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow" id="ancre">
             <a href="?page=activite">
-                <img class="rounded-t-lg" src="./src/img/chambord.webp" alt="Château de Chambord" />
+                <img class="rounded-t-lg" src="./src/img/chambord.webp" alt="" />
             </a>
             <div class="p-5">
                 <a href="?page=activite">
@@ -128,7 +128,7 @@ include 'components/ariane.php';
         <!-- Carte 3 -->
         <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
             <a href="?page=activite">
-                <img class="rounded-t-lg" src="./src/img/grasse.webp" alt="Visitez Grasse" />
+                <img class="rounded-t-lg" src="./src/img/grasse.webp" alt="" />
             </a>
             <div class="p-5">
                 <a href="?page=activite">
@@ -152,7 +152,7 @@ include 'components/ariane.php';
         <!-- Carte 4 -->
         <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
             <a href="?page=activite">
-                <img class="rounded-t-lg" src="./src/img/camargue.webp" alt="Explorez la Camargue" />
+                <img class="rounded-t-lg" src="./src/img/camargue.webp" alt="" />
             </a>
             <div class="p-5">
                 <a href="?page=activite">
@@ -176,7 +176,7 @@ include 'components/ariane.php';
         <!-- Carte 1 -->
         <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
             <a href="?page=activite">
-                <img class="rounded-t-lg" src="./src/img/viaferata.jpg" alt="Via Ferrata en France" />
+                <img class="rounded-t-lg" src="./src/img/viaferata.jpg" alt="" />
             </a>
             <div class="p-5">
                 <a href="?page=activite">
@@ -200,7 +200,7 @@ include 'components/ariane.php';
         <!-- Carte 2 -->
         <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
             <a href="?page=activite">
-                <img class="rounded-t-lg" src="./src/img/vtt.jpg" alt="Randonnée VTT en France" />
+                <img class="rounded-t-lg" src="./src/img/vtt.jpg" alt="" />
             </a>
             <div class="p-5">
                 <a href="?page=activite">
@@ -224,7 +224,7 @@ include 'components/ariane.php';
         <!-- Carte 3 -->
         <div class="max-w-sm bg-white border border-gray-400 rounded-md shadow">
             <a href="?page=activite">
-                <img class="rounded-t-lg" src="./src/img/snowboard.jpg" alt="Snowboard en France" />
+                <img class="rounded-t-lg" src="./src/img/snowboard.jpg" alt="" />
             </a>
             <div class="p-5">
                 <a href="?page=activite">

@@ -103,12 +103,15 @@
                 <a href="#footer" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Pied de
                     page</a>
             </li>
+            <li>
+                <a href="#dyslexic-mode-toggle" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Mode dyslexique</a>
+            </li>
         </ul>
     </div>
 
     <div class="flex flex-col gap-3 fixed top-40 bg-yellow-400 p-6 right-0 z-30" >
         <div>
-            <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique" tabindex="3" class="cursor-pointer">
+            <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique" tabindex="-1" class="cursor-pointer">
             <label for="dyslexic-mode-toggle" class="cursor-pointer">Mode dyslexique</label>
         </div>
     </div>
@@ -120,26 +123,6 @@
             </li>
             <li class="nav-item">
                 <a href="?page=table" aria-label="Statistiques" tabindex="2">Statistiques</a>
-            </li>
-            <li class="nav-item">
-                <button href="?page=logements" class="cursor-default" aria-expanded="false" aria-label="Types de logements" tabindex="2" aria-haspopup>Logements</button>
-                <div class="sub-nav">
-                    <div class="flex flex-col gap-2">
-                        <a href="?page=activitees" class="h2" id="sub-nav-title">Hébergements conviviaux</a>
-                        <ul class="sub-nav-group" aria-labelledby="sub-nav-title">
-                            <li><a href="?page=logements&type=auberges" tabindex="2.5">Auberges</a></li>
-                            <li><a href="?page=logements&type=campings" tabindex="2.5">Campings</a></li>
-                            <li><a href="?page=logements&type=hotes" tabindex="2.5">Maison d'hôtes</a></li>
-                        </ul>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                        <a href="?page=activitees" class="h2" id="sub-nav-title2">Hébergement haut de gamme</a>
-                        <ul class="sub-nav-group" aria-labelledby="sub-nav-title2">
-                            <li><a href="?page=logements&type=hotels" tabindex="2.5">Hôtels</a></li>
-                            <li><a href="?page=logements&type=villas" tabindex="2.5">Villas</a></li>
-                        </ul>
-                    </div>
-                </div>
             </li>
             <li class="nav-item">
                 <button aria-expanded="false" class="cursor-default" aria-label="activités" tabindex="2" aria-haspopup>Activitées</button>

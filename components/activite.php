@@ -12,7 +12,7 @@
 
 <?php
 $breadcrumbs = [
-    ['text' => 'Activités', 'link' => '?page=activitees'],
+    ['text' => 'Activités', 'link' => '?page=activitees#ancre'],
     ['text' => 'Activités Aquatiques', 'link' => '?page=activitees'],
     ['text' => 'Activité exemple']
 ];
@@ -24,7 +24,7 @@ include 'components/ariane.php';
 <main class="container mx-auto px-4 py-8 max-w-4xl" role="main">
 <!-- Image principale -->
 <div class="rounded-lg overflow-hidden shadow-lg mb-6">
-    <img src="./src/img/paris.webp" alt="Vue de Paris avec la Tour Eiffel" class="w-full h-64 object-cover" aria-describedby="image-description">
+    <img src="./src/img/paris.webp" alt="" class="w-full h-64 object-cover" aria-describedby="image-description">
 </div>
 <figcaption id="image-description" class="sr-only">Image montrant la Tour Eiffel et une vue de Paris.</figcaption>
 
