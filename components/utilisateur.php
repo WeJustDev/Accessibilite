@@ -72,7 +72,7 @@
 
 <?php
 $breadcrumbs = [
-    ['text' => 'Accueil', 'link' => '/'],
+    ['text' => 'Accueil', 'link' => '?page=home'],
     ['text' => 'Page utilisateur']
 ];
 

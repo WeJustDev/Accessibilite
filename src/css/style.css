@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'OpenDyslexic';
-    src: url('/src/fonts/OpenDyslexic-Regular.woff2') format('woff2'),
-         url('/src/fonts/OpenDyslexic-Regular.woff') format('woff'),
-         url('/src/fonts/OpenDyslexic-Regular.otf') format('opentype');
+    src: url('../src/fonts/OpenDyslexic-Regular.woff2') format('woff2'),
+         url('../src/fonts/OpenDyslexic-Regular.woff') format('woff'),
+         url('../src/fonts/OpenDyslexic-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -21,6 +21,4 @@
 /* Styles pour le mode dyslexique */
 body.dyslexic-mode {
     font-family: 'OpenDyslexic', Arial, sans-serif !important;
-    background-color: #f5f5f5;
-    color: #333;
 }
