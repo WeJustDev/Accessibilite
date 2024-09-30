@@ -1,5 +1,5 @@
 module.exports = {
-    content: ["./*.php", "./components/*.php"],
+    content: ["./*.php", "./components/*.{php, html}"],
     theme: {
         extend: {},
         screens: {
