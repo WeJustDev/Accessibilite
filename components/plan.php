@@ -6,6 +6,16 @@
 
 <title>Plan du site - Voyages en France</title>
 
+<?php
+$breadcrumbs = [
+    ['text' => 'Accueil', 'link' => '?page=home'],
+    ['text' => 'Plan du site']
+];
+
+include 'components/ariane.php';
+?>
+
+
 <div role="navigation" aria-label="Plan du site" class="plan container mx-auto">
     <h1 class="text-2xl text-gray-900 mb-6">Plan du site</h1>
     <ul role="list" aria-labelledby="activites">
