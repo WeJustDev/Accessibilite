@@ -2,7 +2,16 @@
     <h1 id="mainTitle" tabindex="5"> Nuitées de la saison d’été 2022 et évolution entre 2019 et 2022 par département de la bretagne selon le type d’hébergement</h1>
 </header>
 
-<main>
+<?php
+$breadcrumbs = [
+    ['text' => 'Accueil', 'link' => '?page=home'],
+    ['text' => 'Statistiques détaillés']
+];
+
+include 'components/ariane.php';
+?>
+
+<div class="container mx-auto">
     <section aria-labelledby="overview" tabindex="5">
         <h2 id="overview">Vue d'ensemble</h2>
         <p tabindex="5">Le tableau que vous venez de consulter présente les données des nuitées touristiques pour l'été 2022 (avril à septembre) dans différents types d'hébergements (hôtels, campings, et autres hébergements collectifs) réparties par département de la bretagne, ainsi que l'évolution de ces nuitées par rapport à la même période en 2019.</p>
@@ -74,4 +83,4 @@
         </article>
 
     </section>
-</main>
+</div>

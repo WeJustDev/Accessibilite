@@ -18,8 +18,7 @@
     }
 
     /* first descendant link within a top level navigation item */
-    .nav-item>a,
-    .nav-item>button {
+    .nav-item>a, .nav-item>button {
         border: 1px solid transparent;
         display: inline-block;
         margin: 0 0 -1px 0;
@@ -89,45 +88,41 @@
         aria-label="Accès rapide">
         <ul class="flex gap-5 flex-col md:flex-row md:items-center justify-center h-full w-full overflow-hidden px-2">
             <li>
-                <a href="#search" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false"
-                    tabindex="1">Barre de
+                <a href="#search" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Barre de
                     recherche</a>
             </li>
             <li>
-                <a href="#nav" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Menu
-                    de
+                <a href="#nav" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Menu de
                     navigation</a>
             </li>
             <li>
-                <a href="#contenu" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false"
-                    tabindex="1">Aller au
+                <a href="#contenu" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Aller au
                     contenu</a>
             </li>
             <li>
-                <a href="#footer" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false"
-                    tabindex="1">Pied de
+                <a href="#footer" class="p-2 bg-gray-50 rounded-full" type="button" aria-disabled="false" tabindex="1">Pied de
                     page</a>
             </li>
         </ul>
     </div>
 
-    <div class="flex flex-col gap-3 fixed top-40 bg-yellow-400 p-6 right-0 z-30">
+    <div class="flex flex-col gap-3 fixed top-40 bg-yellow-400 p-6 right-0 z-30" >
         <div>
-            <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique" tabindex="3"
-                class="cursor-pointer">
+            <input type="checkbox" id="dyslexic-mode-toggle" aria-label="Activer le mode dyslexique" tabindex="3" class="cursor-pointer">
             <label for="dyslexic-mode-toggle" class="cursor-pointer">Mode dyslexique</label>
         </div>
     </div>
 
-    <nav id="nav" class="megamenu bg-blue-50" aria-label="Navigation principale">
+    <nav id="nav" class="megamenu bg-blue-50" aria-label="Navigation principale" >
         <ul class="nav-menu container mx-auto flex flex-row gap-3 items-center justify-center p-4">
             <li class="nav-item">
                 <a href="?page=home" aria-label="Page d'accueil" tabindex="2">Accueil</a>
             </li>
             <li class="nav-item">
-
+                <a href="?page=table" aria-label="Statistiques" tabindex="2">Statistiques</a>
+            </li>
+            <li class="nav-item">
                 <button href="?page=logements" class="cursor-default" aria-expanded="false" aria-label="Types de logements" tabindex="2" aria-haspopup>Logements</button>
-
                 <div class="sub-nav">
                     <div class="flex flex-col gap-2">
                         <a href="?page=activitees" class="h2" id="sub-nav-title">Hébergements conviviaux</a>
@@ -173,16 +168,12 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="?page=table" tabindex="2">Quelques chiffres</a>
-            </li>
-            <li class="nav-item">
                 <a href="?page=utilisateur" tabindex="2">Espace utilisateur</a>
             </li>
             <li>
                 <label for="search-input" class="sr-only">Rechercher</label>
-                <input type="text" id="search-input" placeholder="Rechercher..." class="border border-gray-500 rounded-lg p-1 placeholder-gray-500" aria-label="Champ de recherche">
+                <input type="text" id="search" placeholder="Rechercher..." class="border border-gray-500 rounded-lg p-1 placeholder-gray-500" aria-label="Champ de recherche">
                 <button class="bg-blue-500 text-white rounded-lg text-sm" aria-label="Soumettre la recherche">Rechercher</button>
             </li>
-            
         </ul>
     </nav>

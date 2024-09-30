@@ -23,7 +23,16 @@
     </style>
 </head>
 
-<body>
+<?php
+$breadcrumbs = [
+    ['text' => 'Accueil', 'link' => '?page=home'],
+    ['text' => 'Statistiques']
+];
+
+include 'components/ariane.php';
+?>
+
+<div class="container mx-auto">
     <ul class="sr-only">
         <li clas="hidden lg:block"><a href="#tableNuitees" tabindex="5">Acceder au tableau des nuitées en bretagne en 2022</a></li>
         <li class="hidden md:block lg:hidden"><a href="#tableMid" tabindex="5">Acceder au tableau des nuitées en bretagne en 2022</a></li>
@@ -114,11 +123,6 @@
             </tr>
         </tbody>
     </table>
-
-
-
-
-
 
     <!-- tablette -->
     <div class="container mx-auto p-4  hidden md:block lg:hidden " id="tableMid">
@@ -496,4 +500,4 @@
     <!-- Lien vers explication détaillée -->
     <a href="?page=table_detail" aria-labelledby="explicationTableau" class="sr-only" id="detailTableau">Lien vers l'explication détaillée du tableau</a>
     <p id="explicationTableau" class="sr-only">Ce lien mène à une explication détaillée des données du tableau.</p>
-</body>
+</div>

@@ -17,6 +17,7 @@ include 'components/ariane.php';
         <li>Textes redimensionnables : Vous pouvez agrandir les textes sans perte de qualité.</li>
         <li>Compatibilité avec les lecteurs d'écran : Notre site est compatible avec les principaux lecteurs d'écran.</li>
         <li>Notre site propose un affiche avec une police adaptée aux personnes dyslexiques</li>
+        <li>Nos tableaux de <a href="?page=table">statistiques</a> proposent un <a href="?page=table_detail">lien de contournement</a></li>
     </ul>
     <p>Si vous avez des suggestions ou des problèmes d'accessibilité, veuillez nous contacter à <a href="mailto:accessibilite@example.com" class="text-blue-500 underline">accessibilite@example.com</a>.</p>
 </div>
