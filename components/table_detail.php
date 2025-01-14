@@ -86,4 +86,6 @@ include 'components/ariane.php';
         </article>
 
     </section>
+    <a href="?page=table#tableau_fin" aria-labelledby="tableau" class="sr-only" id="detailTableau">Retour</a>
+    <p id="explicationTableau" class="sr-only">Ce lien vous permez de revenir vers la page avec le tableau</p>
 </div>
