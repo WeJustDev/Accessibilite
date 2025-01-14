@@ -1,14 +1,32 @@
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         const form = document.querySelector('form');
+        const fields = [
+            { id: 'floating_email', errorId: 'emailError', message: 'L\'adresse email est requise.', type: 'email' },
+            { id: 'floating_password', errorId: 'passwordError', message: 'Le mot de passe est requis.' },
+            { id: 'floating_repeat_password', errorId: 'confirmPasswordError', message: 'Les mots de passe ne correspondent pas.' },
+            { id: 'floating_first_name', errorId: 'firstNameError', message: 'Le prénom est requis.' },
+            { id: 'floating_last_name', errorId: 'lastNameError', message: 'Le nom de famille est requis.' },
+            { id: 'floating_phone', errorId: 'phoneError', message: 'Le format du numéro de téléphone est incorrect.' }
+        ];
+
+        fields.forEach(field => {
+            const input = document.getElementById(field.id);
+            input.addEventListener('blur', function () {
+                validateField(input, field);
+            });
+
+            input.addEventListener('keydown', function (e) {
+                if (e.key === 'Tab') {
+                    if (!validateField(input, field)) {
+                        e.preventDefault();
+                        input.focus();
+                    }
+                }
+            });
+        });
 
         form.addEventListener('submit', function (event) {
-            const email = document.getElementById('floating_email');
-            const password = document.getElementById('floating_password');
-            const confirmPassword = document.getElementById('floating_repeat_password');
-            const firstName = document.getElementById('floating_first_name');
-            const lastName = document.getElementById('floating_last_name');
-            const phone = document.getElementById('floating_phone');
             let isValid = true;
 
             // Reset aria-invalid attributes and error messages
@@ -19,42 +37,25 @@
                 msg.textContent = '';
             });
 
-            // Validate Email
-            if (!email.value) {
-                email.setAttribute('aria-invalid', 'true');
-                document.getElementById('emailError').textContent = 'L\'adresse email est requise.';
-                isValid = false;
-            }
-
-            // Validate Password
-            if (!password.value) {
-                password.setAttribute('aria-invalid', 'true');
-                document.getElementById('passwordError').textContent = 'Le mot de passe est requis.';
-                isValid = false;
-            }
+            // Validate fields
+            fields.forEach(field => {
+                const input = document.getElementById(field.id);
+                if (!validateField(input, field)) {
+                    isValid = false;
+                }
+            });
 
             // Validate Confirm Password
+            const password = document.getElementById('floating_password');
+            const confirmPassword = document.getElementById('floating_repeat_password');
             if (password.value && password.value !== confirmPassword.value) {
                 confirmPassword.setAttribute('aria-invalid', 'true');
                 document.getElementById('confirmPasswordError').textContent = 'Les mots de passe ne correspondent pas.';
                 isValid = false;
             }
 
-            // Validate First Name
-            if (!firstName.value) {
-                firstName.setAttribute('aria-invalid', 'true');
-                document.getElementById('firstNameError').textContent = 'Le prénom est requis.';
-                isValid = false;
-            }
-
-            // Validate Last Name
-            if (!lastName.value) {
-                lastName.setAttribute('aria-invalid', 'true');
-                document.getElementById('lastNameError').textContent = 'Le nom de famille est requis.';
-                isValid = false;
-            }
-
             // Validate Phone
+            const phone = document.getElementById('floating_phone');
             const phonePattern = /^[0-9]{10}$/;
             if (!phonePattern.test(phone.value)) {
                 phone.setAttribute('aria-invalid', 'true');
@@ -66,6 +67,26 @@
                 event.preventDefault(); // Prevent form submission
             }
         });
+
+        function validateField(input, field) {
+            if (!input.value) {
+                input.setAttribute('aria-invalid', 'true');
+                document.getElementById(field.errorId).textContent = field.message;
+                return false;
+            } else {
+                if (field.type === 'email') {
+                    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    if (!emailPattern.test(input.value)) {
+                        input.setAttribute('aria-invalid', 'true');
+                        document.getElementById(field.errorId).textContent = 'Veuillez entrer une adresse email valide.';
+                        return false;
+                    }
+                }
+                input.setAttribute('aria-invalid', 'false');
+                document.getElementById(field.errorId).textContent = '';
+                return true;
+            }
+        }
     });
 </script>
 <title>Page utilisateur - Voyages en France</title>
