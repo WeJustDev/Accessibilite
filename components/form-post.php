@@ -77,3 +77,25 @@ include 'components/ariane.php';
             aria-label="Ajouter l'activité">Ajouter l'activité</button>
     </form>
 </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('form');
+    const fields = form.querySelectorAll('[required]');
+
+    fields.forEach(field => {
+        field.addEventListener('blur', function () {
+            validateField(field);
+        });
+    });
+
+    function validateField(field) {
+        const errorSpan = document.getElementById(`error-${field.id}`);
+        if (!field.checkValidity()) {
+            errorSpan.classList.remove('hidden');
+        } else {
+            errorSpan.classList.add('hidden');
+        }
+    }
+});
+</script>
