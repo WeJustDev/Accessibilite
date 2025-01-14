@@ -36,9 +36,9 @@ include 'components/ariane.php';
 
 <div class="container mx-auto">
 
-<h1>Les nuités en bretagne</h1>
-<a href="?page=table_detail" aria-labelledby="explicationTableau" class="sr-only" id="detailTableau">Lien vers l'explication détaillée du tableau</a>
-<p id="explicationTableau" class="sr-only">Ce lien mène à une explication détaillée des données du tableau.</p>
+    <h1>Les nuités en bretagne</h1>
+    <a href="?page=table_detail#mainTitle" aria-labelledby="explicationTableau" class="sr-only" id="detailTableau">Lien vers l'explication détaillée du tableau</a>
+    <p id="explicationTableau" class="sr-only">Ce lien mène à une explication détaillée des données du tableau.</p>
 
     <table aria-describedby="tableDescription" class="min-w-full table-auto border-collapse hidden lg:block" id="tableNuitees" tabindex="5">
         <caption class="text-lg font-semibold my-4 text-center">
@@ -498,6 +498,6 @@ include 'components/ariane.php';
 
     </div>
 
-    <!-- Lien vers explication détaillée -->
-    
+
 </div>
+<p id="tableau_fin" class="sr-only">Vous vous situez en dessous du tableau.</p>
